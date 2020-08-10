@@ -14,4 +14,10 @@ and evaluate if a student is prepared to move on to the following lesson.
 
 ## Functionality & MVP
 
+* Lessons will have instructional videos, flash cards, and worksheets. 
+* Schedules will be a calendar that shows teachers availability. Students will be able 
+to sign up for available times through google calendar API. 
+* Search/dropdown will provide users with the ability to search for specific teacher, and a dropdown menu 
+* Reviews will give users the ability to post reviews to a teachers profile page. 
+
 ## Group Members & Work Breakdown
