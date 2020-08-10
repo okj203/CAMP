@@ -11,10 +11,10 @@ const ReviewsReducer = (
   let newState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_USER_REVIEWS:
-      newState.user = action.reviews.data;
+      newState.user = action.reviews;
       return newState;
     case RECEIVE_NEW_REVIEW:
-      newState.new = action.review.data;
+      newState.new = action.review;
       return newState;
     default:
       return state;

@@ -4,6 +4,6 @@ export const getUserReviews = (id) => {
   return axios.get(`/api/reviews/user/${id}`);
 };
 
-export const writeReview = (data) => {
-  return axios.post(`/api/reviews/user/${id}`, data);
+export const writeReview = (id) => {
+  return axios.post(`/api/reviews/user/${id}`);
 };
