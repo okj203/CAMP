@@ -1,20 +1,20 @@
 import {
   RECEIVE_USER_REVIEWS,
   RECEIVE_NEW_REVIEW,
-} from "../actions/tweet_actions";
+} from "../actions/review_actions";
 
 const ReviewsReducer = (
-  state = { all: {}, user: {}, new: undefined },
+  state = { user: {}, new: undefined },
   action
 ) => {
   Object.freeze(state);
   let newState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_USER_REVIEWS:
-      newState.user = action.Reviews.data;
+      newState.user = action.reviews.data;
       return newState;
     case RECEIVE_NEW_REVIEW:
-      newState.new = action.tweet.data;
+      newState.new = action.review.data;
       return newState;
     default:
       return state;
