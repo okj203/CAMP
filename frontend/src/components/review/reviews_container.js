@@ -4,7 +4,7 @@ import Reviews from "./reviews";
 
 const mapStateToProps = (state) => {
   return {
-    reviews: Object.values(state.rweets.all),
+    reviews: Object.values(state.reviews.all),
   };
 };
 
