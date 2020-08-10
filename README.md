@@ -6,11 +6,8 @@ A language learning platform that provides educational lessons and one on one vi
 ## Background and Overview
 CAMP is a language learning platform, which utilizes EdTech to support access to remote learning during the COVID-19 pandemic.
 CAMP takes a two-step approach to language learning: 
-* The first step entails ineractive learning materials, which were designed and curated based on multi-senses education theory to provide students a learning environment with maximized langauge exposure.
-* The second step is one-on-one video calls, which build on and further cement the material covered in each lesson.
-
-* Lessons: Introductional videos for each lesson followed by flash cards and worksheets.
-* One on one sessions: Video calls upon completion of each lesson. Teachers will build on the concepts introduced
+* The first step entails ineractive learning materials, such as videos flash cards and worksheets, which were curated based on multi-senses education theory to provide students a learning environment with maximized langauge exposure.
+* The second step is one-on-one video calls, which build on and further cement the material covered in each lesson. Video calls are scheduled upon completion of each lesson. Teachers will build on the concepts introduced
 and evaluate if a student is prepared to move on to the following lesson. 
 
 ## Functionality & MVP
