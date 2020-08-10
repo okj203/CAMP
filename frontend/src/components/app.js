@@ -3,7 +3,7 @@ import { Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
-import MainPage from './main/main_page';
+import MainPage from './main/main_page.jsx';
 // import DashboardContainer from './dashboard/dashboard_container';
 
 export default () => (
