@@ -26,10 +26,14 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.28",
+<<<<<<< HEAD
     "node": "^14.7.0",
+=======
+>>>>>>> dc0cbd6f3a28ce0090dc1c21e9ccc836d7d4eb40
     "node-sass": "^4.14.1",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react-player": "^2.6.0",
     "validator": "^13.1.1"
   },
   "devDependencies": {

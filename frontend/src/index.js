@@ -6,6 +6,7 @@ import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/session_util';
 import { login, signup, logout } from './actions/session_actions'
 
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
 
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.signup = signup;
     window.logout = logout;
     window.store = store;
+    window.getState = store.getState;
     //TEST
 
   ReactDOM.render(<Root store={store} />, root);
