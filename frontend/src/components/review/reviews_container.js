@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { fetchReviews } from "../../actions/review_actions";
+import { fetchUserReviews } from "../../actions/review_actions";
 import Reviews from "./reviews";
 
 const mapStateToProps = (state) => {
@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchReviews: () => dispatch(fetchReviews()),
+    fetchReviews: () => dispatch(fetchUserReviews()),
   };
 };
 

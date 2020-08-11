@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import ReviewForm from './review_form';
+import { composeReview } from '../../actions/review_actions';
 
 const mapState = state => {
     return {

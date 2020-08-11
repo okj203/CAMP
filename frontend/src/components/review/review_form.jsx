@@ -38,9 +38,13 @@ class ReviewForm extends React.Component {
               onChange={this.update("description")}
             ></textarea>
           </label>
-          <button type="submit" value={}>
+          <label>
             Submit
-          </button>
+            <input type="submit" />
+          </label>
+          {/* <button type="submit" value={}>
+            Submit
+          </button> */}
         </form>
       </div>
     );
