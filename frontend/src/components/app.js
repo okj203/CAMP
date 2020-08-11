@@ -16,7 +16,7 @@ export default () => (
       <AuthRoute path="/lessons/:lesson_id" component={LessonContainer} />
       {/* <ProtectedRoute path="/dashboard" component={DashboardContainer} /> */}
       <AuthRoute path="/" component={MainPage} />
-      <AuthRoute path="/reviews" component={ReviewsContainer} />
+      <AuthRoute path="/reviews/" component={ReviewsContainer} />
     </Switch>
   </div>
 );

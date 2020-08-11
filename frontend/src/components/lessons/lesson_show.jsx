@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/camp_logo.png";
-import '/lessons.css'
+// import '/lessons.css'
 
 class Lesson extends React.Component {
   constructor(props) {
