@@ -1,23 +1,20 @@
-import { connect } from 'react-redux';
-import SessionForm from './session_form';
-import { login, clearErrors } from '../../actions/session_actions'
+import React from "react"
+import SessionForm from "./session_form";
+import {connect} from "react-redux";
+import {receiveUserSignIn} from "../../actions/session_actions";
 
-const mstp = state => ({
-  form: {
-    email: '',
-    password: ''
-  },
-  formType: 'Sign In',
-  errors: state.errors.session
+
+
+const msp = (state, oP) => ({
+    errors: state.errors.session,
+    formType: "Login",
 });
 
-const mdtp = dispatch => ({
-  processForm: user => dispatch(login(user)),
-  login: user => dispatch(login(user)),
-  clearErrors: () => dispatch(clearErrors())
+const mdp = (dispatch) => ({
+    processForm: (currentUser) => dispatch(receiveUserSignIn(currentUser)),
 });
 
-export default connect(mstp, mdtp)(SessionForm)
+export default connect(msp, mdp)(SessionForm);
 
 
 
