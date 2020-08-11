@@ -6,7 +6,7 @@ const mapState = state => {
     return {
         review: {
             rating: '',
-            body: ''
+            description: ''
         }
     }
 }

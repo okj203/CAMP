@@ -14,8 +14,8 @@ export const receiveNewReview = (review) => ({
 });
 
 
-export const fetchUserReviews = (id) => (dispatch) =>
-  getUserReviews(id)
+export const fetchUserReviews = (teacher_id) => (dispatch) =>
+  getUserReviews(teacher_id)
     .then((reviews) => dispatch(receiveUserReviews(reviews)))
     .catch((err) => console.log(err));
 

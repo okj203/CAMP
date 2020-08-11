@@ -10,11 +10,12 @@ import ReviewsContainer from '../components/review/reviews_container';
 export default () => (
   <div>
     <Switch>
+      <AuthRoute exact path="/" component={MainPage} />
       <AuthRoute path="/signup" component={SignupContainer} />
       <AuthRoute path="/login" component={LoginContainer} />
       {/* <ProtectedRoute path="/dashboard" component={DashboardContainer} /> */}
-      <AuthRoute path="/" component={MainPage} />
-      <AuthRoute path="/reviews" component={ReviewsContainer} />
+      {/* <AuthRoute path="/reviews" component={ReviewsContainer} /> */}
+      <AuthRoute path="/reviews/:teacher_id" component={ReviewsContainer} />
     </Switch>
   </div>
 );
