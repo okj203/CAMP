@@ -30,19 +30,7 @@ class MainPage extends React.Component {
   render() {
     // const signup = (
     //   <div>
-    //     <label>Confirm Password:
-    //       <input type="text" value={this.state.password2} onChange={this.update("password2")} />
-    //     </label>
-    //     <label>Username:
-    //       <input type="text" value={this.state.username} onChange={this.update("username")} />
-    //     </label>
-    //     <label>Account Type:
-    //       <select onChange={this.update("accountType")} value={this.state.accountType}>
-    //         <option value="student">Student</option>
-    //         <option value="teacher">Teacher</option>
-    //         <option value="parent">Parent</option>
-    //       </select>
-    //     </label>
+    //     
     //   </div>
     // )
 
@@ -52,17 +40,28 @@ class MainPage extends React.Component {
         <div className='splash-container'>
           <img className='splash-img' src={splash_img} />
         </div>
-        {/* <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
+          <label>Username:
+            <input type="text" value={this.state.username} onChange={this.update("username")} />
+          </label>
           <label>Email:
             <input type="text" value={this.state.email} onChange={this.update("email")} />
           </label>
           <label>Password:
             <input type="password" value={this.state.password} onChange={this.update("password")} />
           </label>
-          {this.props.signup ? this.signUp() : null}
-
-          <button>{this.props.formType}</button>
-        </form> */}
+          <label>Confirm Password:
+          <input type="text" value={this.state.password2} onChange={this.update("password2")} />
+        </label>
+        <label>Account Type:
+          <select onChange={this.update("accountType")} value={this.state.accountType}>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="parent">Parent</option>
+          </select>
+        </label>
+          <button type="submit">Sign Up</button>
+        </form>
         <footer>Copyright &copy; 2020 CAMP</footer>
       </div>
     );
