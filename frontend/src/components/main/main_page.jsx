@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import Navbar from '../nav/navbar_form.jsx';
-import splash_img from '../../images/splash_image.jpg';
-import './main.scss';
-=======
 import React from "react";
 import Navbar from "../nav/navbar_form.jsx";
 import splash_img from "../../images/splash_image.jpg";
 import "./main.scss";
->>>>>>> dc0cbd6f3a28ce0090dc1c21e9ccc836d7d4eb40
 
 class MainPage extends React.Component {
   constructor(props){
