@@ -4,6 +4,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
 import MainPage from './main/main_page.jsx';
+import ReviewsContainer from '../components/review/reviews_container';
 // import DashboardContainer from './dashboard/dashboard_container';
 
 export default () => (
@@ -13,6 +14,7 @@ export default () => (
       <AuthRoute path="/login" component={LoginContainer} />
       {/* <ProtectedRoute path="/dashboard" component={DashboardContainer} /> */}
       <AuthRoute path="/" component={MainPage} />
+      <AuthRoute path="/reviews" component={ReviewsContainer} />
     </Switch>
   </div>
 );
