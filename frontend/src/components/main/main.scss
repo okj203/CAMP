@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	z-index: 1;
+  width: 100%;
+  top: 0;
+  height: 87px;
+  padding: 0px 50px;
+}
+
+.splash-container {
+  width: 100%;
+}
+
+.splash-img {
+  width: 100%;
+	position: relative;
+	top: 0;
+  display: block;
+  filter: brightness(77%);
+}
+
+.login-btn {
+  display: flex;
+  border: 2px solid white;
+  color: white;
+  border-radius: 22px;
+  width: 127px;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 17px;
+  height: 39px;
+  align-items: center;
+}
+
+.login-btn:hover {
+  background-color: white;
+  transition: 0.3s;
+  cursor: pointer;
+  color: gray;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.logo {
+  font-family: 'Bubblegum Sans', cursive;
+  color: white;
+  font-size: 50px;
+}

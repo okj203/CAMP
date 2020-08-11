@@ -12,10 +12,6 @@ export const receiveCurrentUser = currentUser => ({
   currentUser
 });
 
-export const receiveUserSignIn = () => ({
-  type: RECEIVE_USER_SIGN_IN
-});
-
 export const receiveErrors = errors => ({
   type: RECEIVE_SESSION_ERRORS,
   errors
@@ -31,7 +27,7 @@ export const clearErrors = () => ({
 
 export const signup = user => dispatch => (
   SessionUtil.signup(user)
-  .then(() => ( dispatch(receiveUserSignIn())), 
+  .then((user) => ( dispatch(receiveCurrentUser(user))), 
   error => (dispatch(receiveErrors(error.response.data)) ))
 );
 
