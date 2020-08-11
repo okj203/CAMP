@@ -1,0 +1,34 @@
+.video {
+  width: 100px;
+  height: 100px;
+}
+
+.worksheet {
+  width: 700px;
+  height: 700px;
+}
+
+.flashcard {
+  width: 150px;
+  height: 150px;
+}
+
+.lessons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flashcard-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lesson-title {
+  font-size: 50px;
+}
+
+.lesson-title-main {
+  font-size: 80px;
+}

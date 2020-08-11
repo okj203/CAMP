@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../nav/navbar_form.jsx";
 import splash_img from "../../images/splash_image.jpg";
-import "./main.css";
+import "./main.scss";
 
 class MainPage extends React.Component {
   render() {

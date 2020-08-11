@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/camp_logo.png";
 import ReactPlayer from "react-player";
-// import '/lessons.css'
+import "./lessons.scss";
 
 class Lesson extends React.Component {
   constructor(props) {
@@ -86,16 +86,21 @@ class Lesson extends React.Component {
         "https://camp-mern.s3.amazonaws.com/lesson5/worksheet5.png";
     }
     return (
-      <div>
+      <div className="lessons-container">
+        <h1 className="lesson-title-main">Lesson {lessonId}</h1>
         <div>
           <ReactPlayer url={this.state.url} />
         </div>
+        <h2 className="lesson-title">flashcards</h2>
+        <div className="flashcard-container">
+          <img src={this.state.flashcard1} className="flashcard" />
+          <img src={this.state.flashcard2} className="flashcard" />
+          <img src={this.state.flashcard3} className="flashcard" />
+          <img src={this.state.flashcard4} className="flashcard" />
+          <img src={this.state.flashcard5} className="flashcard" />
+        </div>
+        <h2 className="lesson-title">Worksheet</h2>
         <img src={this.state.worksheet} className="worksheet" />
-        <img src={this.state.flashcard1} className="flashcard" />
-        <img src={this.state.flashcard2} className="flashcard" />
-        <img src={this.state.flashcard3} className="flashcard" />
-        <img src={this.state.flashcard4} className="flashcard" />
-        <img src={this.state.flashcard5} className="flashcard" />
       </div>
     );
   }
