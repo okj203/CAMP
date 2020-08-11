@@ -15,6 +15,11 @@ class Reviews extends React.Component {
     }
   }
 
+  componentDidMount() {
+    const { teacher_id } = this.props;
+    this.props.fetchUserReviews(teacher_id);
+  }
+  
   handleSubmit(e) {
     e.preventDefault();
     this.props.composeReview(this.state);
@@ -24,10 +29,6 @@ class Reviews extends React.Component {
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
-  componentDidMount() {
-    const { teacher_id } = this.props;
-    this.props.fetchUserReviews(teacher_id);
-  }
 
   render() {
     const reviews = this.props.reviews;
