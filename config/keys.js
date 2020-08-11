@@ -1,9 +1,3 @@
-module.exports = {
-  mongoURI:
-    "mongodb+srv://camp04:go_camp_go@camp-cluster.tzscg.mongodb.net/campdb?retryWrites=true&w=majority",
-  secretOrKey: "8nfrmx5NEa",
-};
-
 if (process.env.NODE_ENV === 'production') {
   module.exports = require('./keys_prod');
 } else {
