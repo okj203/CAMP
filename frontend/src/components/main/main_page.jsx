@@ -4,7 +4,6 @@ import splash_img from '../../images/splash_image.jpg';
 import './main.css';
 
 class MainPage extends React.Component {
-
   render() {
     return (
       <div className='test'>
@@ -12,9 +11,7 @@ class MainPage extends React.Component {
         <div className='splash-container'>
           <img src={splash_img}/>
         </div>
-        <footer>
-          Copyright &copy; 2020 CAMP
-        </footer>
+        <footer>Copyright &copy; 2020 CAMP</footer>
       </div>
     );
   }

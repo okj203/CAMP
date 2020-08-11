@@ -8,6 +8,10 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const path = require("path");
 
+const express = require("express");
+const app = express();
+app.get("/", (req, res) => res.send("CAMP")); // request response- gets printed
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("frontend/build"));
   app.get("/", (req, res) => {
@@ -20,9 +24,6 @@ mongoose
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch((err) => console.log(err));
 
-const express = require("express");
-const app = express();
-app.get("/", (req, res) => res.send("CAMP")); // request response- gets printed
 
 app.use(passport.initialize());
 require("./config/passport")(passport);
