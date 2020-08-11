@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/camp_logo.png";
+import ReactPlayer from "react-player";
 // import '/lessons.css'
 
 class Lesson extends React.Component {
@@ -13,6 +14,7 @@ class Lesson extends React.Component {
       flashcard4: "",
       flashcard5: "",
       worksheet: "",
+      url: "",
     };
   }
 
@@ -20,6 +22,7 @@ class Lesson extends React.Component {
     const { lessonId } = this.props;
     console.log(lessonId);
     if (parseInt(lessonId) === 1) {
+      this.state.url = "https://www.youtube.com/watch?v=EgzHCuzVKb8";
       this.state.flashcard1 = "https://camp-mern.s3.amazonaws.com/A.png";
       this.state.flashcard2 = "https://camp-mern.s3.amazonaws.com/B.png";
       this.state.flashcard3 = "https://camp-mern.s3.amazonaws.com/C.png";
@@ -27,6 +30,7 @@ class Lesson extends React.Component {
       this.state.flashcard5 = "https://camp-mern.s3.amazonaws.com/E.png";
       this.state.worksheet = "https://camp-mern.s3.amazonaws.com/worksheet.png";
     } else if (parseInt(lessonId) === 2) {
+      this.state.url = "https://www.youtube.com/watch?v=QcqPN727NZA"
       this.state.flashcard1 =
         "https://camp-mern.s3.amazonaws.com/lesson2/1.png";
       this.state.flashcard2 =
@@ -39,7 +43,8 @@ class Lesson extends React.Component {
       this.state.worksheet =
         "https://camp-mern.s3.amazonaws.com/lesson2/worksheet2.png";
     } else if (parseInt(lessonId) === 3) {
-      this.state.flashcard1 =
+      this.state.url = "www.youtube.com/watch?v=7k4uBAiJsMM"
+      https: this.state.flashcard1 =
         "https://camp-mern.s3.amazonaws.com/lesson3/1.png";
       this.state.flashcard2 =
         "https://camp-mern.s3.amazonaws.com/lesson3/2.png";
@@ -52,7 +57,8 @@ class Lesson extends React.Component {
       this.state.worksheet =
         "https://camp-mern.s3.amazonaws.com/lesson3/worksheet3.png";
     } else if (parseInt(lessonId) === 4) {
-      this.state.flashcard1 =
+      this.state.url = "www.youtube.com/watch?v=ybt2jhCQ3lA"
+      https: this.state.flashcard1 =
         "https://camp-mern.s3.amazonaws.com/lesson4/1.png";
       this.state.flashcard2 =
         "https://camp-mern.s3.amazonaws.com/lesson4/2.png";
@@ -65,7 +71,8 @@ class Lesson extends React.Component {
       this.state.worksheet =
         "https://camp-mern.s3.amazonaws.com/lesson4/worksheet4.png";
     } else if (parseInt(lessonId) === 5) {
-      this.state.flashcard1 =
+      this.state.url = "www.youtube.com/watch?v=CXKj7bm4Ops"
+      https: this.state.flashcard1 =
         "https://camp-mern.s3.amazonaws.com/lesson5/1.png";
       this.state.flashcard2 =
         "https://camp-mern.s3.amazonaws.com/lesson5/2.png";
@@ -80,6 +87,9 @@ class Lesson extends React.Component {
     }
     return (
       <div>
+        <div>
+          <ReactPlayer url={this.state.url} />
+        </div>
         <img src={this.state.worksheet} className="worksheet" />
         <img src={this.state.flashcard1} className="flashcard" />
         <img src={this.state.flashcard2} className="flashcard" />
