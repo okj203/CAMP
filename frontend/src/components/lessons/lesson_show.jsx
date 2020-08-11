@@ -20,7 +20,7 @@ class Lesson extends React.Component {
 
   choseContent() {
     const { lessonId } = this.props;
-    console.log(lessonId);
+    // console.log(lessonId);
     if (parseInt(lessonId) === 1) {
       this.state.url = "https://www.youtube.com/watch?v=EgzHCuzVKb8";
       this.state.flashcard1 = "https://camp-mern.s3.amazonaws.com/A.png";

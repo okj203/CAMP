@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Lesson from "./lesson_show";
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(ownProps);
+  // console.log(ownProps);
   return {
     lessonId: ownProps.match.params.lesson_id,
   };

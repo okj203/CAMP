@@ -1,13 +1,12 @@
 import { connect } from "react-redux";
-import { fetchUserReviews } from "../../actions/review_actions";
-import Reviews from "./reviews";
-import { composeReview } from '../../actions/review_actions';
+import { fetchUserReviews, composeReview } from "../../actions/review_actions";
+import User from "./user";
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state.entities.reviews)
+  // console.log(state.entities.reviews)
   return {
-    reviews: Object.values(state.entities.reviews),
+    reviews: Object.values(state.entities.users),
     teacher_id: ownProps.match.params.teacher_id
   };
 };
@@ -19,4 +18,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Reviews);
+export default connect(mapStateToProps, mapDispatchToProps)(User);
