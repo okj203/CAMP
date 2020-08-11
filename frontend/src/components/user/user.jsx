@@ -29,6 +29,12 @@ class User extends React.Component {
 
   render() {
     const { reviews } = this.props;
+    // const teacherReviews = Object.values(reviews)
+    // console.log(reviews.map(ele => (
+    //   ele.description
+    // )))
+    console.log(reviews)
+
     const reviewForm = (
       <div>
             <h3>Tell us about your teacher!</h3>
@@ -57,7 +63,9 @@ class User extends React.Component {
         </div>
     )
 
-    if (reviews.length === 0 || typeof reviews == 'undefined') {
+    if (typeof reviews == "undefined" || reviews.length === 0) {
+      // if (typeof reviews == 'undefined') {
+      // if (typeof reviews == "undefined") {
       return (
         <div>
           <div className="no-reviews">
@@ -66,14 +74,15 @@ class User extends React.Component {
           {reviewForm}
         </div>
       );
-    } else {
+    } else if (reviews) {
       return (
         <div className="reviews-index">
           <h2 className="reviews-header">Student reviews on the teacher</h2>
           <ul className="each-review">
             {reviews.map((review, idx) => (
               <div className="each-review-info">
-                {/* <li key={idx}>{review.description}</li> */}
+                <li key={review.id}>{review.rating}</li>
+                <li key={review.id}>{review.description}</li>
               </div>
             ))}
           </ul>

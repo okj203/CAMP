@@ -4,9 +4,9 @@ import User from "./user";
 
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(state.entities.reviews)
+  console.log(state.entities.users.reviews)
   return {
-    reviews: Object.values(state.entities.users),
+    reviews: state.entities.users.reviews,
     teacher_id: ownProps.match.params.teacher_id
   };
 };
