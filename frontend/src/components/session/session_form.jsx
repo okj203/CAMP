@@ -26,25 +26,25 @@ export default class SessionForm extends React.Component {
     return e => this.setState({ [field]: e.target.value });
   }
 
-  signUp() {
-    return(
-      <div>
-        <label>Confirm Password:
-          <input type="text" value={this.state.password2} onChange={this.update("password2")} />
-        </label>
-        <label>Username:
-          <input type="text" value={this.state.username} onChange={this.update("username")}/>
-        </label>
-        <label>Account Type:
-          <select onChange={this.update("accountType")} value={this.state.accountType}>
-            <option value="student">Student</option>
-            <option value="teacher">Teacher</option>
-            <option value="parent">Parent</option>
-          </select>        
-        </label>
-      </div>
-    )
-  }
+  // signUp() {
+  //   return(
+  //     <div>
+  //       <label>Confirm Password:
+  //         <input type="text" value={this.state.password2} onChange={this.update("password2")} />
+  //       </label>
+  //       <label>Username:
+  //         <input type="text" value={this.state.username} onChange={this.update("username")}/>
+  //       </label>
+  //       <label>Account Type:
+  //         <select onChange={this.update("accountType")} value={this.state.accountType}>
+  //           <option value="student">Student</option>
+  //           <option value="teacher">Teacher</option>
+  //           <option value="parent">Parent</option>
+  //         </select>        
+  //       </label>
+  //     </div>
+  //   )
+  // }
 
 
 
@@ -59,7 +59,21 @@ export default class SessionForm extends React.Component {
           <label>Password:
             <input type="password" value={this.state.password} onChange={this.update("password")}/>
           </label>
-          {this.props.signup ? this.signUp() : null}
+          <div>
+            <label>Confirm Password:
+          <input type="text" value={this.state.password2} onChange={this.update("password2")} />
+            </label>
+            <label>Username:
+          <input type="text" value={this.state.username} onChange={this.update("username")} />
+            </label>
+            <label>Account Type:
+          <select onChange={this.update("accountType")} value={this.state.accountType}>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="parent">Parent</option>
+              </select>
+            </label>
+          </div>
 
           <button>{this.props.formType}</button>
         </form>
