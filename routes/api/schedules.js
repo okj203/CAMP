@@ -17,7 +17,6 @@ router.get("/schedules/new", (req, res) => { // click on calendar to open a sche
     .json({ schedule: schedule.req.body })
     .sort({ date: -1 })
     .then((schedule) => res.json(schedule));
-
 });
 
 router.post(
@@ -31,8 +30,10 @@ router.post(
     }
 
     const newReview = new Review({
-      text: req.body.text,
-      user: req.user.id,
+      date: req.body.date,
+      time: req.body.time,
+      student_id: req.user.id, 
+      teacher_id: req.body.teacher_id,
     });
 
     newReview.save().then((review) => res.json(review));

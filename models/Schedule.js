@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 const ScheduleSchema = new Schema(
   {
     time: {
-      type: Number,
+      type: string,
       required: true,
     },
     date: {
-      type: String,
+      type: Date,
       required: true,
     },
     teacher_id: {
