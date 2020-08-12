@@ -1,7 +1,7 @@
 import React from "react"
 import SessionForm from "./session_form";
 import {connect} from "react-redux";
-import {receiveUserSignIn} from "../../actions/session_actions";
+import { login } from "../../actions/session_actions";
 
 
 
@@ -11,7 +11,7 @@ const msp = (state, oP) => ({
 });
 
 const mdp = (dispatch) => ({
-    processForm: (currentUser) => dispatch(receiveUserSignIn(currentUser)),
+    processForm: (currentUser) => dispatch(login(currentUser)),
 });
 
 export default connect(msp, mdp)(SessionForm);

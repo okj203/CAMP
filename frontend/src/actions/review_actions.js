@@ -13,7 +13,6 @@ export const receiveNewReview = (review) => ({
   review,
 });
 
-
 export const fetchUserReviews = (teacher_id) => (dispatch) =>
   getUserReviews(teacher_id)
     .then((reviews) => dispatch(receiveUserReviews(reviews)))
