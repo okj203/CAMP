@@ -8,7 +8,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     reviews: state.entities.users.reviews,
     teacher_id: ownProps.match.params.teacher_id,
-    info: state.entities.users.info
+    info: state.entities.users.info,
+    reviewer_id: state.session.user.id
   };
 };
 

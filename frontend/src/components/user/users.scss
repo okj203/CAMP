@@ -1,0 +1,40 @@
+
+.index-header {
+  height: 300px;
+  width: 100%;
+  background-size: contain;
+  background-image: url("../../images/jess-bailey-l3N9Q27zULw-unsplash.jpg");
+}
+
+.index-title {
+  font-size: 60px;
+  padding-top: 25px;
+  padding-left: 50px;
+  // font-family: Arial, Helvetica, sans-serif;
+}
+
+.index-header-image{
+  width: 500px;
+  height: 300px;
+}
+
+.teachers-index-outter{
+  background-color: rgb(80, 218, 58);
+}
+
+.teacher-index-inner {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+
+}
+
+.teacers-index-list {
+  width: 200px;
+  background-color: white;
+  list-style-type: none;
+  // border-radius: 20px;
+}

@@ -8,19 +8,22 @@ class User extends React.Component {
     // this.state = this.props.reviews
     this.handleSubmit = this.handleSubmit.bind(this);
     const { teacher_id } = this.props;
+    const { reviewer_id } = this.props;
     this.state = {
       rating: "",
       description: "",
       teacher_id: { teacher_id },
+      reviewer_id: { reviewer_id }
     };
     // this.state = this.props.teacher_id
   }
 
   componentDidMount() {
     const { teacher_id } = this.props;
-    this.props.fetchUserReviews(teacher_id);
+    console.log(teacher_id)
     this.props.fetchUserInfo(teacher_id);
-    this.props.fetchAllUsers();
+    this.props.fetchUserReviews(teacher_id);
+    // this.props.fetchAllUsers();
     // this.props.fetchUserInfo('5f2f097e684d9f947b0ca6ff');
   }
 

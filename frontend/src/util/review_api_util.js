@@ -6,6 +6,9 @@ export const getUserReviews = (teacher_id) => {
   return reviews
 };
 
-export const writeReview = (teacher_id) => {
-  return axios.post(`/api/reviews/${teacher_id}`);
+export const writeReview = (data) => {
+  console.log(data)
+  console.log(data.teacher_id)
+  console.log(data.teacher_id.teacher_id)
+  return axios.post(`/api/reviews/${data.teacher_id}`, data);
 };
