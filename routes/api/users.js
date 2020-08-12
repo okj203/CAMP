@@ -17,8 +17,10 @@ router.get(
   (req, res) => {
     res.json({
       id: req.user.id,
-      username: req.user.username,
       email: req.user.email,
+      fname: req.user.fname,
+      lname: req.user.lname,
+      accountType: req.user.accountType,
     });
   }
 );
@@ -29,8 +31,10 @@ router.get(
   (req, res) => {
     res.json({
       id: req.user.id,
-      username: req.user.username,
       email: req.user.email,
+      fname: req.user.fname,
+      lname: req.user.lname,
+      accountType: req.user.accountType,
     });
   }
 );
@@ -48,9 +52,10 @@ router.post("/register", (req, res) => {
       return res.status(400).json(errors);
     } else {
       const newUser = new User({
-        username: req.body.username,
         email: req.body.email,
         password: req.body.password,
+        fname: req.body.fname,
+        lname: req.body.lname,
         accountType: req.body.accountType,
       });
 

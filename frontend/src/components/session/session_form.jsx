@@ -6,9 +6,10 @@ export default class SessionForm extends React.Component {
 
     this.state = {
       email: "",
-      username: "",
       password: "",
       password2: "",
+      fname: "",
+      lname: "",
       accountType: "student"
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,10 +17,9 @@ export default class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
+    debugger
     const user = Object.assign({}, this.state);
-    this.props.processForm(user)
-    //.then(this.props.history.push("/"));
+    this.props.processForm(user);
   }
 
   update(field) {
@@ -30,10 +30,13 @@ export default class SessionForm extends React.Component {
     return(
       <div>
         <label>Confirm Password:
-          <input type="text" value={this.state.password2} onChange={this.update("password2")} />
+          <input type="password" value={this.state.password2} onChange={this.update("password2")} />
         </label>
-        <label>Username:
-          <input type="text" value={this.state.username} onChange={this.update("username")}/>
+        <label>First Name:
+          <input type="text" value={this.state.fname} onChange={this.update("fname")}/>
+        </label>
+        <label>Last Name:
+          <input type="text" value={this.state.lname} onChange={this.update("lname")}/>
         </label>
         <label>Account Type:
           <select onChange={this.update("accountType")} value={this.state.accountType}>
@@ -49,7 +52,6 @@ export default class SessionForm extends React.Component {
 
 
   render() {
-    // debugger
     return(
       <div className="New Session Form">
         <form onSubmit={this.handleSubmit}>

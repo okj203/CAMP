@@ -27,7 +27,9 @@ export const clearErrors = () => ({
 
 export const signup = user => dispatch => (
   SessionUtil.signup(user)
-  .then((user) => ( dispatch(receiveCurrentUser(user))), 
+  .then((user) => ( dispatch(receiveCurrentUser(user))),
+  // .then((user) => ( dispatch(login(user)))),
+  
   error => (dispatch(receiveErrors(error.response.data)) ))
 );
 
