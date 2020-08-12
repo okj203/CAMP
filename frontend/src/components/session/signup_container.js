@@ -5,7 +5,7 @@ import SessionForm from './session_form';
 const mstp = state => ({
   formType: 'Sign Up',
   signup: true,
-  errors: state.errors.session
+  errors: state.errors.session,
 });
 
 const mdtp = dispatch => ({
