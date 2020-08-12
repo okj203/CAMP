@@ -4,14 +4,19 @@ import {
 } from '../actions/session_actions';
 
 const _nullSession = {
-  currentUser: null,
+  isAuthenticated: false,
+    user: {}
 };
 
 export default (state = _nullSession, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      return Object.assign({}, { currentUser: action.currentUser });
+      return {
+        ...state,
+        isAuthenticated: !!action.currentUser,
+        user: action.currentUser
+      };
     case RECEIVE_USER_LOGOUT:
       return _nullSession;
     default:

@@ -6,9 +6,10 @@ export default class SessionForm extends React.Component {
 
     this.state = {
       email: "",
-      username: "",
       password: "",
       password2: "",
+      fname: "",
+      lname: "",
       accountType: "student"
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,16 +17,16 @@ export default class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
+    debugger
     const user = Object.assign({}, this.state);
-    this.props.processForm(user)
-    //.then(this.props.history.push("/"));
+    this.props.processForm(user);
   }
 
   update(field) {
     return e => this.setState({ [field]: e.target.value });
   }
 
+<<<<<<< HEAD
   // signUp() {
   //   return(
   //     <div>
@@ -45,11 +46,34 @@ export default class SessionForm extends React.Component {
   //     </div>
   //   )
   // }
+=======
+  signUp() {
+    return(
+      <div>
+        <label>Confirm Password:
+          <input type="password" value={this.state.password2} onChange={this.update("password2")} />
+        </label>
+        <label>First Name:
+          <input type="text" value={this.state.fname} onChange={this.update("fname")}/>
+        </label>
+        <label>Last Name:
+          <input type="text" value={this.state.lname} onChange={this.update("lname")}/>
+        </label>
+        <label>Account Type:
+          <select onChange={this.update("accountType")} value={this.state.accountType}>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="parent">Parent</option>
+          </select>        
+        </label>
+      </div>
+    )
+  }
+>>>>>>> c88a5568712c9b287db16d3d07cb9551b66a5362
 
 
 
   render() {
-    // debugger
     return(
       <div className="New Session Form">
         <form onSubmit={this.handleSubmit}>
