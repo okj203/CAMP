@@ -23,9 +23,9 @@ const ReviewsReducer = (
       return newState;
 
     case RECEIVE_ALL_USERS:
-      return { users: action.users.data }
+      return action.users.data
     case RECEIVE_USER_INFO:
-      return { info: action.info.data };
+      return action.info.data
     default:
       return state;
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import UserInfo from './user_info';
+import { UserIndex } from './user_index';
 
 class User extends React.Component {
   constructor(props) {
@@ -76,7 +77,7 @@ class User extends React.Component {
     } else if (reviews) {
       return (
         <div className="reviews-index">
-          <UserInfo />
+          <UserInfo/>
           <h2 className="reviews-header">Student reviews on the teacher</h2>
           <ul className="each-review">
             {reviews.map((review, idx) => (

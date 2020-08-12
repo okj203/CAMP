@@ -6,6 +6,7 @@ import LoginContainer from './session/login_container';
 import MainPage from './main/main_page.jsx';
 import LessonContainer from './lessons/lesson_show_container';
 import UserContainer from '../components/user/user_container';
+import UserIndexContainer from '../components/user/user_index';
 // import DashboardContainer from './dashboard/dashboard_container';
 
 export default () => (
@@ -18,6 +19,7 @@ export default () => (
       {/* <ProtectedRoute path="/dashboard" component={DashboardContainer} /> */}
       {/* <AuthRoute path="/reviews" component={ReviewsContainer} /> */}
       <AuthRoute path="/users/:teacher_id" component={UserContainer} />
+      <AuthRoute path="/users" component={UserIndexContainer} />
     </Switch>
   </div>
 );

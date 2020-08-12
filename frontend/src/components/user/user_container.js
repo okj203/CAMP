@@ -5,8 +5,6 @@ import { fetchUserInfo, fetchAllUsers } from "../../actions/user_actions";
 
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(state.entities.users.reviews)
-  // debugger
   return {
     reviews: state.entities.users.reviews,
     teacher_id: ownProps.match.params.teacher_id,
