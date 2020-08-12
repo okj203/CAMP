@@ -1,6 +1,6 @@
 import React from "react";
 import UserInfo from './user_info';
-import { UserIndex } from './user_index';
+// import { UserIndex } from './user_index_container';
 
 class User extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class User extends React.Component {
     const { teacher_id } = this.props;
     this.props.fetchUserReviews(teacher_id);
     this.props.fetchUserInfo(teacher_id);
-    // this.props.fetchAllUsers();
+    this.props.fetchAllUsers();
     // this.props.fetchUserInfo('5f2f097e684d9f947b0ca6ff');
   }
 
@@ -34,8 +34,8 @@ class User extends React.Component {
   }
 
   render() {
-    const { reviews, info } = this.props;
-    const test = info ? info : null
+    const { reviews } = this.props;
+    // const test = info ? info : null
     const reviewForm = (
       <div>
         <h3>Tell us about your teacher!</h3>

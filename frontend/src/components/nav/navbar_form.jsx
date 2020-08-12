@@ -10,7 +10,6 @@ class NavBar extends React.Component {
   }
 
   logoutUser(e) {
-    debugger
     e.preventDefault();
     this.props.logout();
   }

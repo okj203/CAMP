@@ -14,20 +14,23 @@ export class UserIndex extends Component {
   render() {
     // console.log("user info", props)
     const { users } = this.props
+    console.log(users)
+    if(users) {
     return (
       <div>
         <ul>
+          <h1> HELLOO </h1>
           {/* {users.map(user => (
-                        user.username
+                        user.email
                     ))} */}
         </ul>
       </div>
-    )
+    )}
   }
 }
 
 const mapStateToProps = (state) => ({
-  users: state.entities.reviews
+  users: state.entities.users
 })
 
 const mapDispatchToProps = dispatch => {

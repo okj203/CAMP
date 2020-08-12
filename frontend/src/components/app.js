@@ -7,6 +7,7 @@ import MainPage from './main/main_page.jsx';
 import LessonContainer from './lessons/lesson_show_container';
 import UserContainer from '../components/user/user_container';
 import DashboardContainer from '../components/dashboard/dashboard';
+import userIndexContainer from '../components/user/user_index_container';
 
 export default () => (
   <div>
@@ -16,6 +17,7 @@ export default () => (
       <AuthRoute path="/login" component={LoginContainer} />
       <ProtectedRoute path="/lessons/:lesson_id" component={LessonContainer} />
       <ProtectedRoute path="/dashboard" component={DashboardContainer} />
+      <ProtectedRoute path="/teachers" component={userIndexContainer} />
       {/* <ProtectedRoute path="/reviews" component={ReviewsContainer} /> */}
       <ProtectedRoute path="/users/:teacher_id" component={UserContainer} />
     </Switch>

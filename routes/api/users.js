@@ -26,18 +26,39 @@ router.get(
 );
 
 router.get(
-  "/all",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    res.json({
-      id: req.user.id,
-      email: req.user.email,
-      fname: req.user.fname,
-      lname: req.user.lname,
-      accountType: req.user.accountType,
-    });
+  "/", (req, res) => {
+    User.find()
+      .sort({
+        date: -1
+      })
+      .then(users => res.json(users))
+      .catch(err => res.status(400).json(err))
   }
-);
+)
+
+
+router.get(
+  "/:id", (req, res) => {
+    User
+      .findById(req.params.id)
+      .then(user => res.json(user))
+      .catch((err) => console.log(err));
+  }
+)
+
+// router.get(
+//   "/all",
+//   passport.authenticate("jwt", { session: false }),
+//   (req, res) => {
+//     res.json({
+//       id: req.user.id,
+//       email: req.user.email,
+//       fname: req.user.fname,
+//       lname: req.user.lname,
+//       accountType: req.user.accountType,
+//     });
+//   }
+// );
 
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
