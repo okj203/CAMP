@@ -8,6 +8,7 @@ const passport = require("passport");
 
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
+const { findById } = require("../../models/User");
 
 router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
 
@@ -24,16 +25,36 @@ router.get(
 );
 
 router.get(
-  "/all",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    res.json({
-      id: req.user.id,
-      username: req.user.username,
-      email: req.user.email,
-    });
+  "/", (req, res) => {
+    User.find()
+      .sort({
+        date: -1
+      })
+      .then(users => res.json(users))
+      .catch(err => res.status(400).json(err))
   }
-);
+)
+
+router.get(
+  "/:id", (req, res) => {
+    User
+      .findById(req.params.id)
+      .then(user => res.json(user))
+      .catch((err) => console.log(err));
+  }
+)
+
+// router.get(
+//   "/all",
+//   passport.authenticate("jwt", { session: false }),
+//   (req, res) => {
+//     res.json({
+//       id: req.user.id,
+//       username: req.user.username,
+//       email: req.user.email,
+//     });
+//   }
+// );
 
 router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
