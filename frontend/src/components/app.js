@@ -7,7 +7,7 @@ import MainPage from './main/main_page.jsx';
 import LessonContainer from './lessons/lesson_show_container';
 import UserContainer from '../components/user/user_container';
 import DashboardContainer from '../components/dashboard/dashboard';
-
+ 
 export default () => (
   <div>
     <Switch>
