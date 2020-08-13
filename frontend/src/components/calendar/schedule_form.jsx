@@ -17,9 +17,7 @@ class ScheduleForm extends React.Component {
         }
     }
 
-    componentDidMount() {
-        this.props.fetchUserEvents(this.props.user.id)
-    }
+
 
     handleSubmit(e) {
         e.preventDefault();

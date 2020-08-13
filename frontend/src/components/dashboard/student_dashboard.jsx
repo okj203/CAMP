@@ -15,7 +15,7 @@ const StudentDash = ({user, events}) => {
                 <li><Link to={"/lessons/5"}>Lesson 5</Link></li>
             </ul>
             <h2>{user.fname} {user.lname}'s Scheduled Classes</h2>
-            <EventCalendar events={events} />
+            <EventCalendar events={events} defaultView={"week"}  />
         </div>
     );
 }
