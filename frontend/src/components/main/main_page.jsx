@@ -9,7 +9,7 @@ class MainPage extends React.Component {
       <div className='main-page-container'>
         <Navbar className='navbar' />
         <div className='splash-container'>
-          <img className='splash-img' src={splash_img} />
+          <img alt="splash" className='splash-img' src={splash_img} />
         </div>
         <footer>Copyright &copy; 2020 CAMP</footer>
       </div>
