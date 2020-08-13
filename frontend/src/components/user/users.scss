@@ -1,40 +1,49 @@
+.teacher-index-container {
+  background: #f6f5f7;
+}
 
 .index-header {
-  height: 300px;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  background-size: contain;
-  background-image: url("../../images/jess-bailey-l3N9Q27zULw-unsplash.jpg");
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(247, 238, 113),
+    #ff4b2b
+  );
+  position: relative;
+  left: 0;
+  padding: 15px;
 }
 
 .index-title {
-  font-size: 60px;
-  padding-top: 25px;
-  padding-left: 50px;
-  // font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-family: "Montserrat Alternates";
+  color: #ff4b2b;
 }
 
-.index-header-image{
-  width: 500px;
-  height: 300px;
-}
-
-.teachers-index-outter{
-  background-color: rgb(80, 218, 58);
+.mission {
+  color: white;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 15px;
 }
 
 .teacher-index-inner {
-  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  list-style-type: none;
-
+  position: relative;
 }
 
-.teacers-index-list {
-  width: 200px;
-  background-color: white;
+.teacher-list {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 5px;
+  padding: 10px;
   list-style-type: none;
-  // border-radius: 20px;
+}
+
+.teacher-list > li {
+  text-align: left;
 }
