@@ -15,7 +15,7 @@ const ReviewSchema = new Schema({
     ref: "users",
   },
   teacher_id: {
-    type: Number,
+    type: Schema.Types.ObjectId,
     ref: "users",
   },
 });
