@@ -6,9 +6,9 @@ import { fetchUserInfo, fetchAllUsers } from "../../actions/user_actions";
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    reviews: state.entities.users.reviews,
+    reviews: state.entities.reviews,
     teacher_id: ownProps.match.params.teacher_id,
-    info: state.entities.users.info,
+    teacher: state.entities.users,
     reviewer_id: state.session.user.id
   };
 };
