@@ -44,7 +44,7 @@ export default class SessionForm extends React.Component {
           <input type="password" value={this.state.password2} onChange={this.update("password2")} placeholder="Confirm Password"/>
           <p classname="session-errors">{password2}</p>
           <input type="text" value={this.state.fname} onChange={this.update("fname")} placeholder="First Name"/>
-          <p classname="session-errors">{fname}</p>
+          <p className="session-errors">{fname}</p>
           <input type="text" value={this.state.lname} onChange={this.update("lname")} placeholder="Last Name"/>
           <p className="session-errors">{lname}</p>
         <label className="account-label">Account Type:
