@@ -1,4 +1,6 @@
 import React from "react";
+import UserInfo from './user_info';
+// import { UserIndex } from './user_index_container';
 
 class User extends React.Component {
   constructor(props) {
@@ -6,16 +8,23 @@ class User extends React.Component {
     // this.state = this.props.reviews
     this.handleSubmit = this.handleSubmit.bind(this);
     const { teacher_id } = this.props;
+    const { reviewer_id } = this.props;
     this.state = {
       rating: "",
       description: "",
       teacher_id: { teacher_id },
+      reviewer_id: { reviewer_id }
     };
+    // this.state = this.props.teacher_id
   }
 
   componentDidMount() {
     const { teacher_id } = this.props;
+    console.log(teacher_id)
+    this.props.fetchUserInfo(teacher_id);
     this.props.fetchUserReviews(teacher_id);
+    // this.props.fetchAllUsers();
+    // this.props.fetchUserInfo('5f2f097e684d9f947b0ca6ff');
   }
 
   handleSubmit(e) {
@@ -29,45 +38,39 @@ class User extends React.Component {
 
   render() {
     const { reviews } = this.props;
-    // const teacherReviews = Object.values(reviews)
-    // console.log(reviews.map(ele => (
-    //   ele.description
-    // )))
-    console.log(reviews)
-
+    // const test = info ? info : null
     const reviewForm = (
       <div>
-            <h3>Tell us about your teacher!</h3>
-            <form onSubmit={this.handleSubmit}>
-              <label>
-                Rating
+        <h3>Tell us about your teacher!</h3>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Rating
                 <input
-                  type="text"
-                  value={this.state.rating}
-                  onChange={this.update("rating")}
-                />
-              </label>
-              <br />
-              <label>
-                Description
+              type="text"
+              value={this.state.rating}
+              onChange={this.update("rating")}
+            />
+          </label>
+          <br />
+          <label>
+            Description
                 <textarea
-                  value={this.state.description}
-                  onChange={this.update("description")}
-                ></textarea>
-              </label>
-              <label>
-                Submit
+              value={this.state.description}
+              onChange={this.update("description")}
+            ></textarea>
+          </label>
+          <label>
+            Submit
                 <input type="submit" />
-              </label>
-            </form>
-        </div>
+          </label>
+        </form>
+      </div>
     )
 
     if (typeof reviews == "undefined" || reviews.length === 0) {
-      // if (typeof reviews == 'undefined') {
-      // if (typeof reviews == "undefined") {
       return (
         <div>
+          <UserInfo />
           <div className="no-reviews">
             <h2>There are no reviews</h2>
           </div>
@@ -77,6 +80,7 @@ class User extends React.Component {
     } else if (reviews) {
       return (
         <div className="reviews-index">
+          <UserInfo />
           <h2 className="reviews-header">Student reviews on the teacher</h2>
           <ul className="each-review">
             {reviews.map((review, idx) => (
