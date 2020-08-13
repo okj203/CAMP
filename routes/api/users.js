@@ -87,8 +87,8 @@ router.post("/register", (req, res) => {
           newUser
             .save()
             .then((user) => {
-              const payload = { id: user.id, email: user.email };
-
+              const payload = { id: user.id, email: user.email, fname: user.fname, lname: user.lname, accountType: user.accountType };
+              
               jwt.sign(
                 payload,
                 keys.secretOrKey,
@@ -126,7 +126,7 @@ router.post("/login", (req, res) => {
 
     bcrypt.compare(password, user.password).then((isMatch) => {
       if (isMatch) {
-        const payload = { id: user.id, email: user.email };
+        const payload = { id: user.id, email: user.email, fname: user.fname, lname: user.lname, accountType: user.accountType };
 
         jwt.sign(
           payload,

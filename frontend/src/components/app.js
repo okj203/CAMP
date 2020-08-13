@@ -6,9 +6,9 @@ import LoginContainer from './session/login_container';
 import MainPage from './main/main_page.jsx';
 import LessonContainer from './lessons/lesson_show_container';
 import UserContainer from '../components/user/user_container';
-import DashboardContainer from '../components/dashboard/dashboard';
 import userIndexContainer from '../components/user/user_index_container';
-
+import DashboardContainer from '../components/dashboard/dashboard_container';
+ 
 export default () => (
   <div>
     <Switch>
