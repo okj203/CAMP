@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-// import logo from '../../images/camp_logo.png';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -38,7 +37,6 @@ class NavBar extends React.Component {
   render() {
     return (
       <div className='navbar'>
-        {/* <img src={logo} className='logo' /> */}
         <h1 className='logo'>CAMP</h1>
         {this.getLinks(this.props.loggedIn)}
       </div>
