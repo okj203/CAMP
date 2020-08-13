@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import ReviewsReducer from './reviews_reducer';
+import EventsReducer from './events_reducer';
 
 const entitiesReducer = combineReducers({
-    users: ReviewsReducer
+    reviews: ReviewsReducer,
+    events: EventsReducer
 })
 
 export default entitiesReducer;
