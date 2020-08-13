@@ -37,9 +37,9 @@ class User extends React.Component {
     const teacherInfo = teacher[teacherId]
     return (
       <div>
-        {/* <TeacherReviews reviews={reviews} teacherId={teacherId} teacher={teacher} /> */}
-        {/* <ReviewForm composeReview={this.props.composeReview} reviews={reviews}  */}
-        {/* teacherId={teacherId} teacher={teacher} reviewerId={reviewerId} /> */}
+        <TeacherReviews reviews={reviews} teacherId={teacherId} teacher={teacher} />
+        <ReviewForm composeReview={this.props.composeReview} reviews={reviews} 
+        teacherId={teacherId} teacher={teacher} reviewerId={reviewerId} />
       </div>
     )
   }

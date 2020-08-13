@@ -28,7 +28,8 @@ export class UserIndex extends Component {
 
   render() {
     const { users } = this.props;
-    if (users.length) {
+    const allUsers = Object.values(users)
+    if (allUsers.length) {
       return (
         <div className="teachers-index-container">
           <div className="index-header">
@@ -40,7 +41,7 @@ export class UserIndex extends Component {
             </h2>
           </div>
           <div className="teacher-index-inner">
-            {users.map((user, idx) => (
+            {allUsers.map((user, idx) => (
               <div className="teacers-index-list">
                 {this.showUser(user, idx)}
               </div>

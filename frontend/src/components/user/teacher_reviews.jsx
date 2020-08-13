@@ -18,10 +18,10 @@ class User extends React.Component {
   render() {
     const { reviews, teacher, teacherId } = this.props;
     // const { fname, lname } = teacher ? teacher : null
-    
     const reviewsLength = reviews.length
     const teacherInfo = teacher[teacherId]
-    console.log(teacherInfo)
+    // console.log(teacherInfo)
+    console.log(teacher)
     if (typeof reviewsLength == "undefined" || reviews.length === 0) {
       return (
         <div>
@@ -32,6 +32,10 @@ class User extends React.Component {
         </div>
       );
     } else if (reviews) {
+      console.log(reviews.map(review => (
+        teacher[review.reviewer_id].accountType,
+        teacher[review.reviewer_id]
+      )))
       return (
         <div className="reviews-index">
           {/* <h1>{this.showHeader()}</h1> */}
