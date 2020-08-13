@@ -1,5 +1,54 @@
 .teacher-index-container {
   background: #f6f5f7;
+  position: relative;
+}
+
+// .navbar {
+//   text-align: left;
+//   // display: flex;
+// 	// // justify-content: space-between;
+// 	// align-items: center;
+// 	// position: absolute;
+// 	z-index: 1;
+//   width: 100%;
+//   top: 0;
+//   height: 87px;
+//   padding: 0px 35px;
+// }
+
+.index-navbar {
+  right: 15px;
+  position: absolute;
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout-btn,
+.dash-btn {
+  display: flex;
+  border: 2px solid white;
+  color: white;
+  border-radius: 22px;
+  width: 127px;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 17px;
+  height: 39px;
+  align-items: center;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.logout-btn:hover,
+.dash-btn:hover {
+  background-color: white;
+  transition: 0.3s;
+  cursor: pointer;
+  color: gray;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .index-header {
@@ -21,16 +70,11 @@
   font-family: "Montserrat Alternates";
   color: #ff4b2b;
 }
-//   font-size: 60px;
-//   padding-top: 25px;
-//   padding-left: 50px;
-//   // font-family: Arial, Helvetica, sans-serif;
-// }
 
-.index-header-image{
+.index-header-image {
   width: 500px;
   height: 300px;
-};
+}
 
 .mission {
   color: white;
@@ -57,10 +101,8 @@
 .teacher-list > li {
   text-align: left;
 }
-  // border-radius: 20px;
-// }
 
-.reviews-index{
+.reviews-index {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,17 +110,17 @@
   margin-top: 100px;
 }
 
-.show-info-header{
+.show-info-header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.each-review-info{
+.each-review-info {
   display: flex;
 }
 
-.teacher-review-form{
+.teacher-review-form {
   display: flex;
   flex-direction: column;
   align-items: center;

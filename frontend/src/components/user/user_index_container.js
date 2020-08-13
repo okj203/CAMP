@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchAllUsers } from "../../actions/user_actions";
+import {logout} from '../../actions/session_actions';
 import { Link } from "react-router-dom";
 import "./users.scss";
 // import teacherBanner from '../../images/teacher-banner.jpg';
@@ -26,12 +27,20 @@ export class UserIndex extends Component {
       );
   }
 
+
+
   render() {
     const { users } = this.props;
     if (users.length) {
       return (
         <div className="teachers-index-container">
           <div className="index-header">
+
+            <div className="index-navbar">
+              <Link className="dash-btn" to="/dashboard">Dashboard</Link>
+              <button className="logout-btn" onClick={this.props.logout}>Log out</button>
+            </div>
+
             <h1 className="index-title"> CAMP Teachers </h1>
             <h2 className="mission">
               Our mission is to foster our students to learn the English
@@ -62,6 +71,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllUsers: () => dispatch(fetchAllUsers()),
+    logout: () => dispatch(logout())
   };
 };
 
