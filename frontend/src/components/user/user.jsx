@@ -11,9 +11,9 @@ class User extends React.Component {
 
   componentDidMount() {
     const { teacherId } = this.props;
+    this.props.fetchAllUsers();
     this.props.fetchUserInfo(teacherId);
     this.props.fetchUserReviews(teacherId);
-    this.props.fetchAllUsers();
   }
 
   // componentDidUpdate() {
