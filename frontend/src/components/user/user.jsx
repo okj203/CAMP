@@ -9,6 +9,7 @@ class User extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     const { teacher_id } = this.props;
     const { reviewer_id } = this.props;
+    const { teacher } = this.props;
     this.state = {
       rating: "",
       description: "",
@@ -20,7 +21,7 @@ class User extends React.Component {
 
   componentDidMount() {
     const { teacher_id } = this.props;
-    console.log(teacher_id)
+    // console.log(teacher_id)
     this.props.fetchUserInfo(teacher_id);
     this.props.fetchUserReviews(teacher_id);
     // this.props.fetchAllUsers();
@@ -36,8 +37,19 @@ class User extends React.Component {
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
+  showHeader() {
+    const { teacher } = this.props;
+    return (
+      <div className="show-info-header">
+        <h1>{teacher.fname} {teacher.lname}</h1>
+        <p>{teacher.email}</p>
+      </div>
+    )
+  }
+
   render() {
     const { reviews } = this.props;
+    
     // const test = info ? info : null
     const reviewForm = (
       <div>
@@ -66,11 +78,11 @@ class User extends React.Component {
         </form>
       </div>
     )
-
-    if (typeof reviews == "undefined" || reviews.length === 0) {
+    console.log(reviews.length)
+    const reviewsLength = reviews.length
+    if (typeof reviewsLength == "undefined" || reviews.length === 0) {
       return (
         <div>
-          <UserInfo />
           <div className="no-reviews">
             <h2>There are no reviews</h2>
           </div>
@@ -80,7 +92,7 @@ class User extends React.Component {
     } else if (reviews) {
       return (
         <div className="reviews-index">
-          <UserInfo />
+          <h1>{this.showHeader()}</h1>
           <h2 className="reviews-header">Student reviews on the teacher</h2>
           <ul className="each-review">
             {reviews.map((review, idx) => (
@@ -90,7 +102,6 @@ class User extends React.Component {
               </div>
             ))}
           </ul>
-
           {reviewForm}
         </div>
       );
