@@ -33,7 +33,7 @@ class EventCalendar extends React.Component {
       <div className="App">
         <Schedule
           defaultDate={moment().toDate()}
-          defaultView="month"
+          defaultView={this.props.defaultView}
           events={this.props.events}
           localizer={localizer}
           onEventDrop={this.onEventDrop}
