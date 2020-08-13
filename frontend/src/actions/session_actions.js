@@ -29,10 +29,13 @@ export const clearErrors = () => ({
   type: CLEAR_SESSION_ERRORS
 });
 
-export const signup = (user) => (dispatch) =>
-  SessionUtil.signup(user).then(
-    () => dispatch(login(user))
-  );
+export const signup = (user) => (dispatch) => {
+  return SessionUtil.signup(user).then(
+    () => dispatch(login(user)),
+    error => {
+      dispatch(receiveErrors(error.response.data));
+    });
+}
 
 export const login = user => dispatch => (
   SessionUtil.login(user).then(res => {

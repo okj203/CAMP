@@ -38,11 +38,15 @@ export default class SessionForm extends React.Component {
   }
 
   signUp() {
+    const {password2, fname, lname} = this.props.errors
     return (
       <>
           <input type="password" value={this.state.password2} onChange={this.update("password2")} placeholder="Confirm Password"/>
+          <p classname="session-errors">{password2}</p>
           <input type="text" value={this.state.fname} onChange={this.update("fname")} placeholder="First Name"/>
+          <p classname="session-errors">{fname}</p>
           <input type="text" value={this.state.lname} onChange={this.update("lname")} placeholder="Last Name"/>
+          <p className="session-errors">{lname}</p>
         <label className="account-label">Account Type:
           <select className="select-label" onChange={this.update("accountType")} value={this.state.accountType}>
             <option value="student">Student</option>
@@ -65,6 +69,8 @@ export default class SessionForm extends React.Component {
       <a className='tag' href="#/signup">Sign up now</a>
     );
 
+    const {email, password} = this.props.errors
+
     return (
       <div className="new-session-form">
         <div className="session-header">
@@ -76,7 +82,9 @@ export default class SessionForm extends React.Component {
           <form className="session-form" onSubmit={this.handleSubmit}>
               <p className="session-type">{this.props.formType}</p>
               <input type="text" value={this.state.email} onChange={this.update("email")} placeholder='Email' />
+              <p classname="session-errors">{email}</p>
               <input type="password" value={this.state.password} onChange={this.update("password")} placeholder='Password' />
+              <p classname="session-errors">{password}</p>
             {this.props.signup ? this.signUp() : null}
             <div className="session-btn">
               <button>{this.props.formType}</button>
