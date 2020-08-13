@@ -38,7 +38,12 @@
 
 .teacher-list {
   display: grid;
-  grid-gap: 25px;
-  grid-template-columns: auto auto auto auto;
-  // grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 5px;
+  padding: 10px;
+  list-style-type: none;
+}
+
+.teacher-list > li {
+  text-align: left;
 }
