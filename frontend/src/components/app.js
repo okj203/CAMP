@@ -13,7 +13,7 @@ import './reset.scss';
 export default () => (
   <div>
     <Switch>
-      <Route exact path="/" component={MainPage} />
+      <AuthRoute exact path="/" component={MainPage} />
       <AuthRoute path="/signup" component={SignupContainer} />
       <AuthRoute path="/login" component={LoginContainer} />
       <ProtectedRoute path="/lessons/:lesson_id" component={LessonContainer} />

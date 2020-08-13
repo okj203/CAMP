@@ -30,8 +30,9 @@ export const clearErrors = () => ({
 });
 
 export const signup = (user) => (dispatch) =>
-  SessionUtil.signup(user).then(
-    () => dispatch(login(user))
+  SessionUtil.signup(user)
+  .then(() => dispatch(login(user)),
+  errors => dispatch(receiveErrors(errors))
   );
 
 export const login = user => dispatch => (

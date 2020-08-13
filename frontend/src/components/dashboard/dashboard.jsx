@@ -7,7 +7,6 @@ class Dashboard extends React.Component {
 
     render() {
         const user = this.props.user
-        debugger
         if (this.props.user.accountType === "student") {
             return <StudentDash user={user} />
         }
