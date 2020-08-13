@@ -2,8 +2,7 @@ import React from "react"
 import {Link} from "react-router-dom"
 import EventCalendar from "../calendar/calendar"
 
-const StudentDash = ({user}) => {
-
+const StudentDash = ({user, events}) => {
     return(
         <div>
             <h1>{user.fname} {user.lname}'s Dashboard</h1>
@@ -16,7 +15,7 @@ const StudentDash = ({user}) => {
                 <li><Link to={"/lessons/5"}>Lesson 5</Link></li>
             </ul>
             <h2>{user.fname} {user.lname}'s Scheduled Classes</h2>
-            <EventCalendar />
+            <EventCalendar events={events} defaultView={"week"}  />
         </div>
     );
 }

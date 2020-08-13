@@ -1,20 +1,32 @@
 import React from "react"
-import {Link} from "react-router-dom"
 import StudentDash from "./student_dashboard"
 import TeacherDash from "./teacher_dashboard"
 
 class Dashboard extends React.Component {
 
+    componentDidMount() {
+        this.props.fetchUserEvents(this.props.user.id)
+    }
+
     render() {
-        const user = this.props.user
+        const { user, events} = this.props;
         if (this.props.user.accountType === "student") {
-            return <StudentDash user={user} />
+            return (
+              <div>
+                <StudentDash user={user} events={events} />
+              </div>
+            );
         }
         else {
-            return <TeacherDash user={user} />
+            return(
+                <div>
+                    <TeacherDash user={user} events={events} />
+                </div>
+            ) 
         }
 
     }
 }
 
 export default Dashboard;
+

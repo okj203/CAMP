@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
 const users = require("./routes/api/users");
 const lessons = require("./routes/api/lessons");
-const schedules = require("./routes/api/schedules");
+const events = require("./routes/api/events");
 const reviews = require("./routes/api/reviews");
 const bodyParser = require("body-parser");
 const passport = require("passport");
@@ -36,5 +36,5 @@ app.use(bodyParser.json()); // parses data into json and passes it to the routes
 
 app.use("/api/users", users);
 app.use("/api/lessons", lessons);
-app.use("/api/schedules", schedules);
+app.use("/api/events", events);
 app.use("/api/reviews", reviews);
