@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../images/camp_logo.png";
 import ReactPlayer from "react-player";
 import "./lessons.scss";
 
