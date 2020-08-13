@@ -1,34 +1,21 @@
 .teacher-index-container {
   background: #f6f5f7;
   position: relative;
+  overflow: hidden;
 }
 
-// .navbar {
-//   text-align: left;
-//   // display: flex;
-// 	// // justify-content: space-between;
-// 	// align-items: center;
-// 	// position: absolute;
-// 	z-index: 1;
-//   width: 100%;
-//   top: 0;
-//   height: 87px;
-//   padding: 0px 35px;
-// }
-
 .index-navbar {
-  right: 15px;
+  right: 100px;
   position: absolute;
-  width: 25%;
   display: flex;
-  justify-content: space-between;
 }
 
 .logout-btn,
-.dash-btn {
+.dash-btn,
+#teacher-link {
   display: flex;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid #ff4b2b;
+  color: #ff4b2b;
   border-radius: 22px;
   width: 127px;
   justify-content: center;
@@ -39,30 +26,25 @@
   height: 39px;
   align-items: center;
   background-color: transparent;
-  overflow: hidden;
 }
 
 .logout-btn:hover,
-.dash-btn:hover {
-  background-color: white;
+.dash-btn:hover,
+#teacher-link:hover {
+  background-color: #ff4b2b;
   transition: 0.3s;
   cursor: pointer;
-  color: gray;
+  color: white;
   font-family: "Montserrat Alternates", sans-serif;
 }
 
 .index-header {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(247, 238, 113),
-    #ff4b2b
-  );
   position: relative;
   left: 0;
-  padding: 15px;
+  margin-left: 60px;
+  margin-top: 40px;
 }
 
 .index-title {
@@ -71,35 +53,34 @@
   color: #ff4b2b;
 }
 
-.index-header-image {
-  width: 500px;
-  height: 300px;
-}
-
 .mission {
-  color: white;
-  font-family: "Montserrat Alternates", sans-serif;
+  color: black;
+  font-family: "Comic Neue", cursive;
   font-size: 15px;
 }
 
 .teacher-index-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 40px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-gap: 28px;
   justify-content: center;
-  position: relative;
 }
 
 .teacher-list {
+  text-align: center;
   display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-gap: 5px;
-  padding: 10px;
+  grid-template-columns: repeat(4, 112px);
+  grid-gap: 10px;
   list-style-type: none;
-}
-
-.teacher-list > li {
-  text-align: left;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0px 14px 10px rgba(0, 0, 0, 0.25),
+    5px 5px 10px 4px rgba(0, 0, 0, 0.22);
 }
 
 .reviews-index {
@@ -124,4 +105,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.teacher-list {
+  font-family: "Comic Neue", cursive;
 }

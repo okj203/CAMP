@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchAllUsers } from "../../actions/user_actions";
-import {logout} from '../../actions/session_actions';
+import { logout } from "../../actions/session_actions";
 import { Link } from "react-router-dom";
 import "./users.scss";
 // import teacherBanner from '../../images/teacher-banner.jpg';
@@ -21,13 +21,15 @@ export class UserIndex extends Component {
       return (
         <ul className="teacher-list">
           <li>{user.email}</li>
-          <li> {`${user.fname} ${user.lname}`} </li>
-          <Link to={`/users/${user._id}`}> View Teacher Profile </Link>
+          <li> {user.fname}</li>
+          <li> {user.lname}</li>
+          <Link id="teacher-link" to={`/users/${user._id}`}>
+            {" "}
+            Profile{" "}
+          </Link>
         </ul>
       );
   }
-
-
 
   render() {
     const { users } = this.props;
@@ -35,10 +37,13 @@ export class UserIndex extends Component {
       return (
         <div className="teachers-index-container">
           <div className="index-header">
-
             <div className="index-navbar">
-              <Link className="dash-btn" to="/dashboard">Dashboard</Link>
-              <button className="logout-btn" onClick={this.props.logout}>Log out</button>
+              <Link className="dash-btn" to="/dashboard">
+                Dashboard
+              </Link>
+              <button className="logout-btn" onClick={this.props.logout}>
+                Log out
+              </button>
             </div>
 
             <h1 className="index-title"> CAMP Teachers </h1>
@@ -50,15 +55,12 @@ export class UserIndex extends Component {
           </div>
           <div className="teacher-index-inner">
             {users.map((user, idx) => (
-              <div className="teacers-index-list">
-                {this.showUser(user, idx)}
-              </div>
+                this.showUser(user, idx)
             ))}
           </div>
         </div>
       );
-    }
-    else {
+    } else {
       return <h1>ELSE</h1>;
     }
   }
@@ -71,7 +73,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllUsers: () => dispatch(fetchAllUsers()),
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
   };
 };
 
