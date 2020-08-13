@@ -38,3 +38,27 @@
   list-style-type: none;
   // border-radius: 20px;
 }
+
+.reviews-index{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.show-info-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.each-review-info{
+  display: flex;
+}
+
+.teacher-review-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
