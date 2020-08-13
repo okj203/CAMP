@@ -8,7 +8,7 @@ const EventsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_USER_EVENTS:
       debugger;
-      return Object.assign({}, action.events)
+      return Object.assign({}, action.events.data)
     case RECEIVE_NEW_EVENT:
       debugger;
       return Object.assign(newState, { [action.event.data._id]: action.event.data})
