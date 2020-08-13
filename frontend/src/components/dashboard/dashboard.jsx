@@ -13,14 +13,14 @@ class Dashboard extends React.Component {
         if (this.props.user.accountType === "student") {
             return (
               <div>
-                <StudentDash user={user} events={events} />
+                <StudentDash user={user} events={events} defaultView={"week"} />
               </div>
             );
         }
         else {
             return(
                 <div>
-                    <TeacherDash user={user} events={events} />
+                    <TeacherDash user={user} events={events} defaultView={"week"} />
                 </div>
             ) 
         }

@@ -12,8 +12,8 @@ class ScheduleForm extends React.Component {
             date: Date.now(),
             start_time: Date.now(),
             end_time: Date.now(),
-            student_id: this.props.user.id,
-            teacher_id: this.props.user.id
+            student_id: this.props.currentUser.id,
+            teacher_id: this.props.teacherId
         }
     }
 
