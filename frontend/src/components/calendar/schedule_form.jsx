@@ -22,10 +22,8 @@ class ScheduleForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const event = Object.assign({}, this.state);
-        debugger
         event.start_time = new Date(event.date + "T" + event.start_time);
         event.end_time = new Date(event.date + "T" + event.end_time);
-        debugger
         this.props.fetchNewEvent(event);
     }
 
