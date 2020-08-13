@@ -6,25 +6,16 @@ class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    const { teacher_id } = this.props;
-    const { reviewer_id } = this.props;
+    const { teacherId } = this.props;
+    const { reviewerId } = this.props;
     const { teacher } = this.props;
     this.state = {
       rating: "",
       description: "",
-      teacher_id: { teacher_id },
-      reviewer_id: { reviewer_id }
+      teacher_id: teacherId,
+      reviewer_id: reviewerId
     };
   }
-
-  // componentDidMount() {
-  //   const { teacher_id } = this.props;
-  //   // console.log(teacher_id)
-  //   this.props.fetchUserInfo(teacher_id);
-  //   this.props.fetchUserReviews(teacher_id);
-  //   // this.props.fetchAllUsers();
-  //   // this.props.fetchUserInfo('5f2f097e684d9f947b0ca6ff');
-  // }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -38,7 +29,6 @@ class ReviewForm extends React.Component {
   reviewForm() {
     return (
       <div >
-        {/* <h3>Tell us about your teacher!</h3> */}
         <form className="teacher-review-form" onSubmit={this.handleSubmit}>
           <label>
             Rating
@@ -65,22 +55,21 @@ class ReviewForm extends React.Component {
   };
 
   render() {
-    const { reviews } = this.props;
+    const { reviews, teacher, teacherId } = this.props;
     const reviewsLength = reviews.length
-    const { teacher } = this.props;
-    const { teacher_id } = this.props;
-    const teacherInfo = teacher[teacher_id]
-    console.log(reviews)
+    const teacherInfo = teacher[teacherId]
+    // console.log(reviews)
     if (typeof reviewsLength == "undefined" || reviews.length === 0) {
       return null
     } else {
-    return (
-      <div className="reviews-index">
-        <h3>Would you like to leave a review for {teacherInfo.fname} {teacherInfo.lname}?</h3>
-        {this.reviewForm()}
-      </div>
-    )};
-    
+      return (
+        <div className="reviews-index">
+          <h3>Would you like to leave a review for {teacherInfo.fname} {teacherInfo.lname}?</h3>
+          {this.reviewForm()}
+        </div>
+      )
+    };
+
   }
 }
 

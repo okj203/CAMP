@@ -13,14 +13,12 @@ const ReviewsReducer = (
   let newState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_USER_REVIEWS:
-      // console.log(action.reviews);
-      // newState.user = action.reviews;
-      // newState.user = { reviews: action.reviews.data};
+      // debugger
       return action.reviews.data;
-    // return newState;
     case RECEIVE_NEW_REVIEW:
-      newState.new = action.review;
-      return newState;
+      debugger
+      // newState.new = action.review.data;
+      return Object.assign(newState, { [action.review.data._id]: action.review.data});
     // case RECEIVE_ALL_USERS:
     //   return action.users.data
     // case RECEIVE_USER_INFO:
