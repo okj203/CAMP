@@ -84,7 +84,7 @@ class Lesson extends React.Component {
         <div>
           <ReactPlayer url={this.links.url} />
         </div>
-        <h2 className="lesson-title">flashcards</h2>
+        <h2 className="lesson-title">Flashcards</h2>
         <div className="flashcard-container">
           <img alt="lesson" src={this.links.flashcard1} className="flashcard" />
           <img alt="lesson" src={this.links.flashcard2} className="flashcard" />
