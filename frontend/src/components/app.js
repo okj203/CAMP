@@ -8,7 +8,8 @@ import LessonContainer from './lessons/lesson_show_container';
 import UserContainer from '../components/user/user_container';
 import userIndexContainer from '../components/user/user_index_container';
 import DashboardContainer from '../components/dashboard/dashboard_container';
- 
+import './reset.scss';
+
 export default () => (
   <div>
     <Switch>

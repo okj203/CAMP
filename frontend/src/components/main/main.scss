@@ -1,9 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+body {
+  background: #f6f5f7;;
+} 
+  
 .navbar {
   display: flex;
 	justify-content: space-between;
@@ -61,12 +59,28 @@
 
 .logo {
   font-family: 'Bubblegum Sans', cursive;
+  font-size: 45px;
   color: white;
-  font-size: 50px;
 }
 
 .session-selection {
   display: flex;
   width: 28%;
   justify-content: space-evenly;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  right: 10px;
+}
+
+.motto {
+  position: absolute;
+  top: 151px;
+  width: 38%;
+  right: 4vh;
+  color: white;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 38px;
 }
