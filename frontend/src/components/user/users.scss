@@ -1,0 +1,85 @@
+.teacher-index-container {
+  background: #f6f5f7;
+}
+
+.index-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(247, 238, 113),
+    #ff4b2b
+  );
+  position: relative;
+  left: 0;
+  padding: 15px;
+}
+
+.index-title {
+  font-size: 50px;
+  font-family: "Montserrat Alternates";
+  color: #ff4b2b;
+}
+//   font-size: 60px;
+//   padding-top: 25px;
+//   padding-left: 50px;
+//   // font-family: Arial, Helvetica, sans-serif;
+// }
+
+.index-header-image{
+  width: 500px;
+  height: 300px;
+};
+
+.mission {
+  color: white;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 15px;
+}
+
+.teacher-index-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.teacher-list {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 5px;
+  padding: 10px;
+  list-style-type: none;
+}
+
+.teacher-list > li {
+  text-align: left;
+}
+  // border-radius: 20px;
+// }
+
+.reviews-index{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.show-info-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.each-review-info{
+  display: flex;
+}
+
+.teacher-review-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

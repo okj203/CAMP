@@ -2,6 +2,7 @@ const Validator = require("validator");
 const validText = require("./valid-text");
 
 module.exports = function validateReviewInput(data) {
+
   let errors = {};
 
   data.description = validText(data.description) ? data.description : "";

@@ -3,6 +3,8 @@ import {
   RECEIVE_NEW_REVIEW,
 } from "../actions/review_actions";
 
+// import { RECEIVE_ALL_USERS, RECEIVE_USER_INFO } from "../actions/user_actions";
+
 const ReviewsReducer = (
   state = { user: {}, new: undefined },
   action
@@ -14,11 +16,16 @@ const ReviewsReducer = (
       // console.log(action.reviews);
       // newState.user = action.reviews;
       // newState.user = { reviews: action.reviews.data};
-      return { reviews: action.reviews.data };
-      // return newState;
+      return action.reviews.data;
+    // return newState;
     case RECEIVE_NEW_REVIEW:
       newState.new = action.review;
       return newState;
+    // case RECEIVE_ALL_USERS:
+    //   return action.users.data
+    // case RECEIVE_USER_INFO:
+    //   debugger
+    //   return action.info.data
     default:
       return state;
   }

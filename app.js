@@ -12,8 +12,6 @@ const express = require("express");
 const app = express();
 // app.get("/", (req, res) => res.send("CAMP")); // request response- gets printed
 
-
-
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
