@@ -42,7 +42,7 @@ export default class SessionForm extends React.Component {
     return (
       <>
           <input type="password" value={this.state.password2} onChange={this.update("password2")} placeholder="Confirm Password"/>
-          <p classname="session-errors">{password2}</p>
+          <p className="session-errors">{password2}</p>
           <input type="text" value={this.state.fname} onChange={this.update("fname")} placeholder="First Name"/>
           <p className="session-errors">{fname}</p>
           <input type="text" value={this.state.lname} onChange={this.update("lname")} placeholder="Last Name"/>
@@ -82,9 +82,9 @@ export default class SessionForm extends React.Component {
           <form className="session-form" onSubmit={this.handleSubmit}>
               <p className="session-type">{this.props.formType}</p>
               <input type="text" value={this.state.email} onChange={this.update("email")} placeholder='Email' />
-              <p classname="session-errors">{email}</p>
+              <p className="session-errors">{email}</p>
               <input type="password" value={this.state.password} onChange={this.update("password")} placeholder='Password' />
-              <p classname="session-errors">{password}</p>
+              <p className="session-errors">{password}</p>
             {this.props.signup ? this.signUp() : null}
             <div className="session-btn">
               <button>{this.props.formType}</button>
