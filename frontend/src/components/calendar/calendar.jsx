@@ -8,26 +8,15 @@ import "react-big-calendar/lib/addons/dragAndDrop/styles.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 const localizer = momentLocalizer(moment);
-const DnDCalendar = withDragAndDrop(Calendar);
+const Schedule = withDragAndDrop(Calendar);
 
 class EventCalendar extends React.Component {
 
-  constructor(props) {
-    super(props)
-  }
   
-  state = {
-    events: this.props.events
-  };
 
-  onEventResize = (events) => {
+
+  onEventResize = ({events}) => {
     const { start_time, end_time } = events;
-
-    this.setState((state) => {
-      state.events[0].start_time = start_time;
-      state.events[0].end_time = end_time;
-      return { events: state.events };
-    });
   };
 
   onEventDrop = (data) => {
@@ -35,17 +24,24 @@ class EventCalendar extends React.Component {
   };
 
   render() {
+    this.props.events.forEach(event => {
+      event.start_time = new Date(event.start_time)
+      event.end_time = new Date (event.end_time)
+    });
+
     return (
       <div className="App">
-        <DnDCalendar
+        <Schedule
           defaultDate={moment().toDate()}
           defaultView="month"
-          events={this.state.events}
+          events={this.props.events}
           localizer={localizer}
           onEventDrop={this.onEventDrop}
           onEventResize={this.onEventResize}
           resizable
           style={{ height: "100vh" }}
+          startAccessor="start_time"
+          endAccessor="end_time"
         />
       </div>
     );

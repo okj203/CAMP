@@ -7,7 +7,6 @@ import ScheduleForm from "../calendar/schedule_form"
 class Dashboard extends React.Component {
 
     componentDidMount() {
-        debugger;
         this.props.fetchUserEvents(this.props.user.id)
     }
 
