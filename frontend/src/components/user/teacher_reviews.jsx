@@ -5,6 +5,10 @@ import './users.scss'
 
 class User extends React.Component {
 
+  componentDidUpdate() {
+    this.props.fetchUserReviews(this.props.teacherId)
+  }
+
   showReviews() {
     const { reviews, teacher, teacherId } = this.props;
     // const { fname, lname } = teacher ? teacher : null
