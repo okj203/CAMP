@@ -16,12 +16,6 @@ class User extends React.Component {
     this.props.fetchUserEvents(teacherId);
   }
 
-  // componentDidUpdate() {
-  //   const { teacherId } = this.props;
-  //   this.props.fetchUserInfo(teacherId);
-  //   this.props.fetchUserReviews(teacherId);
-  // }
-
   showHeader() {
     const { teacher } = this.props;
     return (

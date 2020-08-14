@@ -1,6 +1,9 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import "./lessons.scss";
+import { Link } from "react-router-dom";
+import watercolor from "../../images/watercolor.png";
+import "../user/users.scss";
 
 class Lesson extends React.Component {
   constructor(props) {
@@ -80,26 +83,90 @@ class Lesson extends React.Component {
     }
     return (
       <div className="lessons-container">
-        <h1 className="lesson-title-main">Lesson {lessonId}</h1>
-        <div>
-          <ReactPlayer url={this.links.url} />
+        <div className="video-container">
+          <h1 className="lesson-title-main">Lesson {lessonId}</h1>
+          <div>
+            <ReactPlayer url={this.links.url} />
+          </div>
         </div>
-        <h2 className="lesson-title">Flashcards</h2>
-        <div className="flashcard-container">
-          <img alt="lesson" src={this.links.flashcard1} className="flashcard" />
-          <img alt="lesson" src={this.links.flashcard2} className="flashcard" />
-          <img alt="lesson" src={this.links.flashcard3} className="flashcard" />
-          <img alt="lesson" src={this.links.flashcard4} className="flashcard" />
-          <img alt="lesson" src={this.links.flashcard5} className="flashcard" />
+
+        <div className="flash-lesson">
+          <div className="flashcard-box">
+            <h2 className="lesson-title">Flashcards</h2>
+            <div className="flashcard-container">
+              <img
+                alt="lesson"
+                src={this.links.flashcard1}
+                className="flashcard"
+              />
+              <img
+                alt="lesson"
+                src={this.links.flashcard2}
+                className="flashcard"
+              />
+              <img
+                alt="lesson"
+                src={this.links.flashcard3}
+                className="flashcard"
+              />
+              <img
+                alt="lesson"
+                src={this.links.flashcard4}
+                className="flashcard"
+              />
+              <img
+                alt="lesson"
+                src={this.links.flashcard5}
+                className="flashcard"
+              />
+            </div>
+          </div>
+          <div className="lesson-box">
+            <h2 className="worksheet-title">Worksheet</h2>
+            <img
+              alt="lesson"
+              src={this.links.worksheet}
+              className="worksheet"
+            />
+          </div>
         </div>
-        <h2 className="lesson-title">Worksheet</h2>
-        <img alt="lesson" src={this.links.worksheet} className="worksheet" />
       </div>
     );
   }
 
   render() {
-    return <div className="lesson">{this.choseContent()}</div>;
+        const navBtns = (
+          <div className="teachers-index-container">
+            <img alt="watercolor" className="watercolor" src={watercolor} />
+            <div className="index-header">
+              <div className="index-navbar">
+                <Link className="dash-btn" to="/dashboard">
+                  Dashboard
+                </Link>
+                <Link className="dash-btn" to="/teachers">
+                  Teachers
+                </Link>
+                <button className="logout-btn" onClick={this.props.logout}>
+                  Log out
+                </button>
+              </div>
+
+              <h1 className="index-title"> Camper's Lesson </h1>
+            </div>
+          </div>
+        );
+
+    return (
+      <div>
+        {navBtns}
+        <div className="lesson">{this.choseContent()}</div>
+        <div className="download-btn-outer">
+          <a className="download-btn" href="https://www.eslkidstuff.com/">
+            Download
+          </a>
+        </div>
+      </div>
+    );
   }
 }
 

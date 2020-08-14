@@ -1,0 +1,24 @@
+.event-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.event-container {
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 14px 10px rgba(0, 0, 0, 0.25),
+    5px 5px 10px 4px rgba(0, 0, 0, 0.22);
+    padding: 35px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    min-width: 870px;
+    max-width: 1000px;
+}
+
+label, input {
+    padding: 5px;
+}
+
+
