@@ -50,7 +50,7 @@ class User extends React.Component {
       // console.log(reviews.map(review => (
       //   teacher[review.reviewer_id].accountType
       // )))
-      const id = reviews[0].reviewer_id
+      // const id = reviews[0].reviewer_id
       // console.log(teacher[id].username)
       return (
         <div className="reviews-index">
@@ -61,8 +61,9 @@ class User extends React.Component {
               <li key={idx}>
                 <p>{review.rating} Stars</p>
                 <p>{review.description}</p>
-                <p>{teacher[review.reviewer_id].username}</p>
-                <p>{teacher[review.reviewer_id].username}</p>
+                {/* <p>{teacher[review.reviewer_id].fname}</p>
+                <p>{teacher[review.reviewer_id].lname}</p> */}
+                <p>{`${teacher[review.reviewer_id].fname} ${teacher[review.reviewer_id].lname}`}</p>
               </li>
             ))}
             {this.mapReviews()}

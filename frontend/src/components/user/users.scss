@@ -1,15 +1,15 @@
 .teacher-index-container {
   background-image: url('../../images/watercolor.png');
-  // background: #f6f5f7;
   position: relative;
   overflow: hidden;
 }
 
 .watercolor {
-  width: 100%;
-	position: relative;
+  width: 60%;
+	position: absolute;
 	top: 0;
   display: block;
+  z-index: -1;
 }
 
 .index-navbar {
@@ -76,6 +76,7 @@
 }
 
 .teacher-list {
+  background-color: white;
   text-align: center;
   display: grid;
   grid-template-columns: repeat(4, 112px);

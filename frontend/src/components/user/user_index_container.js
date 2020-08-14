@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllUsers } from "../../actions/user_actions";
 import { logout } from "../../actions/session_actions";
 import { Link } from "react-router-dom";
-import watercolor from '../../images/watercolor.png';
+import watercolor from "../../images/watercolor.png";
 import "./users.scss";
 // import teacherBanner from '../../images/teacher-banner.jpg';
 // import image from "../../images/jess-bailey-l3N9Q27zULw-unsplash.jpg"
@@ -34,11 +34,11 @@ export class UserIndex extends Component {
 
   render() {
     const { users } = this.props;
-    const allUsers = Object.values(users)
+    const allUsers = Object.values(users);
     if (allUsers.length) {
       return (
         <div className="teachers-index-container">
-          {/* <img alt="watercolor" className='watercolor' src={watercolor} /> */}
+          <img alt="watercolor" className="watercolor" src={watercolor} />
           <div className="index-header">
             <div className="index-navbar">
               <Link className="dash-btn" to="/dashboard">
@@ -51,15 +51,13 @@ export class UserIndex extends Component {
 
             <h1 className="index-title"> CAMP Teachers </h1>
             <h2 className="mission">
-              Our mission is to foster our students to learn the English
-              language as a tool, not as a goal, and to become individuals with
-              creative and critical thinking skills.
+              Our mission is to foster our students to learn English as a tool,
+              not as a goal, and to become individuals with creative and
+              critical thinking skills.
             </h2>
           </div>
           <div className="teacher-index-inner">
-            {allUsers.map((user, idx) => (
-                this.showUser(user, idx)
-            ))}
+            {allUsers.map((user, idx) => this.showUser(user, idx))}
           </div>
         </div>
       );
