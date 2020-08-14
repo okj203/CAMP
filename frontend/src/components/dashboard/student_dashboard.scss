@@ -14,9 +14,8 @@
 
 .lessons-list {
   position: relative;
-  left: 20px;
-  list-style-type: circle;
-  margin-top: 8px;
+  list-style-type: none;
+  margin-top: 14px;
 }
 
 .pending-lessons {
@@ -25,4 +24,21 @@
 
 .calendar-container {
   margin-top: 35px;
+}
+
+.link-l {
+  display: flex;
+  border: 2px solid #3174ad;
+  color: white;
+  border-radius: 5px;
+  width: 121px;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 14px;
+  height: 33px;
+  align-items: center;
+  background-color: #3174ad;
+  margin-bottom: 8px;
 }
