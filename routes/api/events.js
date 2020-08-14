@@ -43,7 +43,7 @@ router.post(
             start_time: req.body.start_time,
             end_time: req.body.end_time,
         });
-        console.log(newEvent)
+        // console.log(newEvent)
         newEvent.save().then((event) => res.json(event));
     }
 );

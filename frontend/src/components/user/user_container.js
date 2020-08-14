@@ -3,6 +3,7 @@ import { fetchUserReviews, composeReview } from "../../actions/review_actions";
 import User from "./user";
 import { fetchUserInfo, fetchAllUsers } from "../../actions/user_actions";
 import { fetchUserEvents, fetchNewEvent } from "../../actions/event_actions";
+import { logout } from "../../actions/session_actions";
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -22,7 +23,8 @@ const mapDispatchToProps = (dispatch) => {
     fetchUserInfo: teacher_id => dispatch(fetchUserInfo(teacher_id)),
     fetchAllUsers: () => dispatch(fetchAllUsers()),
     fetchUserEvents: teacher_id => dispatch(fetchUserEvents(teacher_id)),
-    fetchNewEvent: event => dispatch(fetchNewEvent(event))
+    fetchNewEvent: event => dispatch(fetchNewEvent(event)),
+    logout: () => dispatch(logout()),
   };
 };
 
