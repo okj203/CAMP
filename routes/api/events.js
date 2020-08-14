@@ -2,22 +2,22 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const passport = require("passport");
-const event = require("../../models/events");
+const Event = require("../../models/Events");
 const validateEventInput = require("../../validation/events");
 
 
 //teacher events index
 router.get("/:user_id", (req, res) => {
-    event.find({
+    Event.find({
             student_id: req.params.user_id
     })
-        .then((events) => res.json(events))
-        .catch((err) => res
-            .status(404)
-            .json({
-                noeventsfound: "No events found for the user"
-            })
-        );
+    .then((events) => res.json(events))
+    .catch((err) => res
+        .status(404)
+        .json({
+            noeventsfound: "No events found for the user"
+        })
+    );
 });
 
 //teacher event form

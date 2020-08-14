@@ -24,7 +24,7 @@ class User extends React.Component {
           </h1>
           <div className="each-review">
             {reviews.map((review, idx) => (
-              <li key={idx}>
+              <li className="single-review" key={idx}>
                 <p>{review.rating} Stars</p>
                 <p>{review.description}</p>
                 <p>{`${teacher[review.reviewer_id].fname} ${

@@ -19,7 +19,6 @@ export default class SessionForm extends React.Component {
   }
 
   componentDidMount() {
-    debugger;
     this.props.clearErrors();
   }
 
