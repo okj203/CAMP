@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchAllUsers } from "../../actions/user_actions";
+import { logout } from "../../actions/session_actions";
 import { Link } from "react-router-dom";
 import "./users.scss";
 // import teacherBanner from '../../images/teacher-banner.jpg';
@@ -15,23 +16,37 @@ export class UserIndex extends Component {
     this.props.fetchAllUsers();
   }
 
-  showUser(user, idx) {
+  showUser(user) {
     if (user.accountType === "teacher")
       return (
         <ul className="teacher-list">
           <li>{user.email}</li>
-          <li> {`${user.fname} ${user.lname}`} </li>
-          <Link to={`/users/${user._id}`}> View Teacher Profile </Link>
+          <li> {user.fname}</li>
+          <li> {user.lname}</li>
+          <Link id="teacher-link" to={`/users/${user._id}`}>
+            {" "}
+            Profile{" "}
+          </Link>
         </ul>
       );
   }
 
   render() {
     const { users } = this.props;
-    if (users.length) {
+    const allUsers = Object.values(users)
+    if (allUsers.length) {
       return (
         <div className="teachers-index-container">
           <div className="index-header">
+            <div className="index-navbar">
+              <Link className="dash-btn" to="/dashboard">
+                Dashboard
+              </Link>
+              <button className="logout-btn" onClick={this.props.logout}>
+                Log out
+              </button>
+            </div>
+
             <h1 className="index-title"> CAMP Teachers </h1>
             <h2 className="mission">
               Our mission is to foster our students to learn the English
@@ -40,16 +55,13 @@ export class UserIndex extends Component {
             </h2>
           </div>
           <div className="teacher-index-inner">
-            {users.map((user, idx) => (
-              <div className="teacers-index-list">
-                {this.showUser(user, idx)}
-              </div>
+            {allUsers.map((user) => (
+                this.showUser(user)
             ))}
           </div>
         </div>
       );
-    }
-    else {
+    } else {
       return <h1>ELSE</h1>;
     }
   }
@@ -62,6 +74,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllUsers: () => dispatch(fetchAllUsers()),
+    logout: () => dispatch(logout()),
   };
 };
 

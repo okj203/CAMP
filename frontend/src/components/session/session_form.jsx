@@ -91,7 +91,7 @@ export default class SessionForm extends React.Component {
               <button onClick={this.handleDemo}>Demo User</button>
             </div>
             <div className='toggle-session'>
-              <div className='toggle-text'>{this.props.formType === 'Sign Up' ? 'Already have an account?' : 'Already a member?'}</div>
+              <div className='toggle-text'>{this.props.formType === 'Sign Up' ? 'Already a camper?' : 'Become part of the CAMP Family?'}</div>
               {this.props.formType === 'Sign Up' ? loginTag : signupTag}
             </div>
           </form>

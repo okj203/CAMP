@@ -13,10 +13,17 @@ class User extends React.Component {
 
   componentDidMount() {
     const { teacherId } = this.props;
+    this.props.fetchAllUsers();
     this.props.fetchUserInfo(teacherId);
     this.props.fetchUserReviews(teacherId);
     this.props.fetchUserEvents(teacherId)
   }
+
+  // componentDidUpdate() {
+  //   const { teacherId } = this.props;
+  //   this.props.fetchUserInfo(teacherId);
+  //   this.props.fetchUserReviews(teacherId);
+  // }
 
   showHeader() {
     const { teacher } = this.props;
@@ -36,7 +43,8 @@ class User extends React.Component {
         <TeacherDash user={teacher} events={events} defaultView={"month"} />
         <ScheduleForm teacherId={this.props.match.params.teacher_id} events={events} currentUser={currentUser} fetchNewEvent={fetchNewEvent} match={this.props.match.params.teacherId} />
         <TeacherReviews reviews={reviews} teacherId={teacherId} teacher={teacher} />
-        <ReviewForm composeReview={this.props.composeReview} reviews={reviews} teacherId={teacherId} teacher={teacher} reviewerId={reviewerId} />
+        <ReviewForm composeReview={this.props.composeReview} reviews={reviews} 
+        teacherId={teacherId} teacher={teacher} reviewerId={reviewerId} />
       </div>
     )
   }
