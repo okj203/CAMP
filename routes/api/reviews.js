@@ -32,14 +32,13 @@ router.post(
     if (!isValid) {
       return res.status(400).json(errors);
     }
-    // debugger
     const newReview = new Review({
       rating: req.body.rating,
       description: req.body.description,
-      reviewer_id: req.body.reviewer_id.reviewer_id, // user object id; cf) Schema.Types.ObjectId
-      teacher_id: req.body.teacher_id.teacher_id, // teacher_id is found from params/url, which is a number;
+      reviewer_id: req.body.reviewer_id, // user object id; cf) Schema.Types.ObjectId
+      teacher_id: req.body.teacher_id, // teacher_id is found from params/url, which is a number;
     });
-    console.log(newReview)
+    
     newReview.save().then((review) => res.json(review));
   }
 );

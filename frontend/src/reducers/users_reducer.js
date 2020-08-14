@@ -10,9 +10,13 @@ const UsersReducer = ( state = {}, action ) => {
   let newState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_ALL_USERS:
-      return action.users.data
+      const allUsers = action.users.data;
+      const users = {};
+      for (let i = 0; i < action.users.data.length; i++) {
+        users[allUsers[i]._id] = allUsers[i]
+      }
+      return users
     case RECEIVE_USER_INFO:
-      // debugger
       return Object.assign(newState, { [action.info.data._id]: action.info.data })
 
       // return action.info.data

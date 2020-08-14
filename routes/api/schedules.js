@@ -1,9 +1,9 @@
-const express = require("express");
-const router = express.Router();
-const Validator = require("validator");
-const validText = require("../../validation/valid-text");
-const passport = require("passport");
-const Schedule = require("../../models/Schedule");
+// const express = require("express");
+// const router = express.Router();
+// const Validator = require("validator");
+// const validText = require("../../validation/valid-text");
+// const passport = require("passport");
+// const Schedule = require("../../models/Schedule");
 
 
 // router.get("/", (req, res) => {
@@ -40,4 +40,4 @@ const Schedule = require("../../models/Schedule");
 //   }
 // );
 
-module.exports = router;
+// module.exports = router;
