@@ -28,14 +28,15 @@ class ReviewForm extends React.Component {
     return (
       <div >
         <form className="teacher-review-form" onSubmit={this.handleSubmit}>
-          <label>
-            Rating
-                <input
-              type="text"
-              value={this.state.rating}
-              onChange={this.update("rating")}
-            />
-          </label>
+          <label >Rating:</label>
+            <select name="rating" onChange={this.update("rating")} value={this.state.rating}>
+              <option>Select Rating</option> 
+              <option value="5">5</option>
+              <option value="4">4</option>
+              <option value="3">3</option>
+              <option value="2">2</option>
+              <option value="1">1</option>
+            </select>
           <br />
           <label>
             Description
@@ -61,8 +62,8 @@ class ReviewForm extends React.Component {
       return null
     } else {
       return (
-        <div className="reviews-index">
-          <h3>Would you like to leave a review for {teacherInfo.fname} {teacherInfo.lname}?</h3>
+        <div className="reviews-form">
+          <h3 className="leave-review">Would you like to leave a review for {teacherInfo.fname} {teacherInfo.lname}?</h3>
           {this.reviewForm()}
         </div>
       )

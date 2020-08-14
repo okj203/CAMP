@@ -3,17 +3,24 @@ import React from "react"
 import EventCalendar from "../calendar/calendar";
 
 const TeacherDash = ({ user, events, defaultView, teacherId}) => {
+    
     if (user[teacherId]) {
         const teacher = user[teacherId];
         return(
-            <div>
+            <div className="scheduled-outer">
+                
                 {/* <h1>{teacher.fname} {teacher.lname}'s Dashboard</h1> */}
-                <h2>{teacher.fname} {teacher.lname}'s Scheduled Classes</h2>
+                <h2 className="scheduled">{teacher.fname} {teacher.lname}'s <br/> Scheduled Classes</h2>
                 <EventCalendar events={events} defaultView={defaultView}  />
             </div>
         )
     } else {
-        return null
+        return(
+            <div>
+                <h1 className="user-dashname">{user.fname} {user.lname}'s Dashboard</h1>
+                <EventCalendar user={user} events={events} defaultView={defaultView} />
+            </div>
+        )
     }
 }
 
