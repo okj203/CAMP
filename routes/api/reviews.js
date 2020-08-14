@@ -32,7 +32,6 @@ router.post(
     if (!isValid) {
       return res.status(400).json(errors);
     }
-    // debugger
     const newReview = new Review({
       rating: req.body.rating,
       description: req.body.description,

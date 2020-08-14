@@ -17,7 +17,6 @@ const UsersReducer = ( state = {}, action ) => {
       }
       return users
     case RECEIVE_USER_INFO:
-      // debugger
       return Object.assign(newState, { [action.info.data._id]: action.info.data })
 
       // return action.info.data

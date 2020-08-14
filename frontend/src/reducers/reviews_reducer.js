@@ -13,7 +13,6 @@ const ReviewsReducer = (
   let newState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_USER_REVIEWS:
-      // debugger
       return action.reviews.data;
     case RECEIVE_NEW_REVIEW:
       // newState.new = action.review.data;
@@ -21,7 +20,6 @@ const ReviewsReducer = (
     // case RECEIVE_ALL_USERS:
     //   return action.users.data
     // case RECEIVE_USER_INFO:
-    //   debugger
     //   return action.info.data
     default:
       return state;
