@@ -16,14 +16,14 @@ export class UserIndex extends Component {
     this.props.fetchAllUsers();
   }
 
-  showUser(user) {
+  showUser(user, idx) {
     if (user.accountType === "teacher")
       return (
         <ul className="teacher-list">
           <li>{user.email}</li>
           <li> {user.fname}</li>
           <li> {user.lname}</li>
-          <Link id="teacher-link" to={`/users/${user._id}`}>
+          <Link key={idx} id="teacher-link" to={`/users/${user._id}`}>
             {" "}
             Profile{" "}
           </Link>
@@ -55,8 +55,8 @@ export class UserIndex extends Component {
             </h2>
           </div>
           <div className="teacher-index-inner">
-            {allUsers.map((user) => (
-                this.showUser(user)
+            {allUsers.map((user, idx) => (
+                this.showUser(user, idx)
             ))}
           </div>
         </div>
