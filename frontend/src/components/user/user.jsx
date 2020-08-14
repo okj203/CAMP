@@ -8,7 +8,6 @@ import watercolor from "../../images/watercolor.png";
 import "./users.scss";
 
 class User extends React.Component {
-
   componentDidMount() {
     const { teacherId } = this.props;
     this.props.fetchAllUsers();
