@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../nav/navbar_container";
+import Navbar from "../nav/navbar_form";
 import splash_img from "../../images/splash_image4.jpg";
 import "./main.scss";
 
