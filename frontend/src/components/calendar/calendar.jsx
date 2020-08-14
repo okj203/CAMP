@@ -29,6 +29,7 @@ class EventCalendar extends React.Component {
     return (
       <div className="App">
         <Schedule
+          className="teacher-calendar"
           defaultDate={moment().toDate()}
           defaultView={this.props.defaultView}
           events={this.props.events}
@@ -36,7 +37,7 @@ class EventCalendar extends React.Component {
           onEventDrop={this.onEventDrop}
           onEventResize={this.onEventResize}
           resizable
-          style={{ height: "100vh" }}
+          style={{ height: "65vh" }}
           startAccessor="start_time"
           endAccessor="end_time"
         />
