@@ -35,8 +35,9 @@ class User extends React.Component {
     const { reviews, teacher, teacherId } = this.props;
     // const { fname, lname } = teacher ? teacher : null
     const reviewsLength = reviews.length
+    console.log(Object.values(teacher).length)
     const teacherInfo = teacher[teacherId]
-    if (typeof reviewsLength == "undefined" || reviews.length === 0) {
+    if (typeof reviewsLength == "undefined" || Object.values(teacher).length < 2) {
       return (
         <div>
           <div className="no-reviews">

@@ -59,7 +59,7 @@ class ReviewForm extends React.Component {
     const reviewsLength = reviews.length
     const teacherInfo = teacher[teacherId]
     // console.log(reviews)
-    if (typeof reviewsLength == "undefined" || reviews.length === 0) {
+    if (typeof reviewsLength == "undefined" || Object.values(teacher).length < 2) {
       return null
     } else {
       return (
