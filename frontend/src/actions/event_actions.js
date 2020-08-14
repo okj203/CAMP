@@ -19,6 +19,11 @@ export const fetchUserEvents = (userId) => dispatch => (
         .then((events) => dispatch(receiveUserEvents(events)))
 )
 
+export const fetchTeacherEvents = (teacherId) => dispatch => (
+    EventUtil.fetchTeacherEvents(teacherId)
+    .then((events) => dispatch(receiveUserEvents(events)))
+)
+
 export const fetchNewEvent = (event) => dispatch => (
     EventUtil.fetchNewEvent(event)
         .then((event) => dispatch(receiveNewEvent(event)))
