@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => {
     teacherId: ownProps.match.params.teacher_id,
     teacher: state.entities.users,
     reviewerId: state.session.user.id,
-    events: Object.values(state.entities.events)
+    events: Object.values(state.entities.events),
+    currentUser: state.session.user
   };
 };
 
