@@ -10,11 +10,11 @@ const StudentDash = ({user, events, defaultView}) => {
                 <h1 className="s-dashboard">{user.fname} {user.lname}'s Dashboard</h1>
                 <h2 className="pending-lessons">View Your Pending Lessons</h2>
                 <ul className="lessons-list">
-                    <li><Link to={"/lessons/1"}>Lesson 1</Link></li>
-                    <li><Link to={"/lessons/2"}>Lesson 2</Link></li>
-                    <li><Link to={"/lessons/3"}>Lesson 3</Link></li>
-                    <li><Link to={"/lessons/4"}>Lesson 4</Link></li>
-                    <li><Link to={"/lessons/5"}>Lesson 5</Link></li>
+                    <li><Link className="link-l" to={"/lessons/1"}>Lesson 1</Link></li>
+                    <li><Link className="link-l" to={"/lessons/2"}>Lesson 2</Link></li>
+                    <li><Link className="link-l" to={"/lessons/3"}>Lesson 3</Link></li>
+                    <li><Link className="link-l" to={"/lessons/4"}>Lesson 4</Link></li>
+                    <li><Link className="link-l" to={"/lessons/5"}>Lesson 5</Link></li>
                 </ul>
             </div>
             <div className="calendar-container">
