@@ -1,17 +1,22 @@
 .video {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+}
+
+.video-container {
+  margin: 50px;
 }
 
 .worksheet {
-  width: 700px;
-  height: 700px;
+  width: 770px;
+  height: 970px;
 }
 
 .flashcard {
   width: 180px;
   height: 180px;
-  margin: 10px;
+  margin-bottom: 17px;
+  margin-right: 17px;
 }
 
 .lessons-container {
@@ -23,13 +28,54 @@
 
 .flashcard-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
-.lesson-title {
-  font-size: 50px;
+.lesson-title-main,
+.lesson-title,
+.worksheet-title {
+  font-size: 30px;
+  font-family: "Comic Neue", cursive;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.lesson-title-main {
-  font-size: 80px;
+.worksheet-title {
+  margin-bottom: 20px;
+}
+
+.flash-lesson {
+  display: flex;
+  flex-direction: row;
+}
+
+.download-btn {
+  display: flex;
+  border: 2px solid #ff4b2b;
+  color: #ff4b2b;
+  border-radius: 22px;
+  width: 127px;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 17px;
+  height: 39px;
+  align-items: center;
+  background-color: transparent;
+}
+
+.download-btn:hover {
+  background-color: #ff4b2b;
+  transition: 0.3s;
+  cursor: pointer;
+  color: white;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.download-btn-outer {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
 }

@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-// import { logout } from "../../actions/session_actions";
+import { logout } from "../../actions/session_actions";
 
 import Lesson from "./lesson_show";
 
@@ -10,4 +10,10 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps)(Lesson);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    logout: () => dispatch(logout()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Lesson);

@@ -1,5 +1,5 @@
 import React from "react"
-
+import "./schedule_form.scss";
 
 class ScheduleForm extends React.Component {
     constructor(props) {
@@ -34,26 +34,29 @@ class ScheduleForm extends React.Component {
 
     render(){
         return(
-            <div className="event-form">
-                <form onSubmit={this.handleSubmit}>
-                    <label>Title:
-                        <input type="text" value={this.state.title} onChange={this.update("title")}/>
-                    </label>
+            <div className="event-form-container">
+                <div className="event-container">
+                    <form onSubmit={this.handleSubmit}>
+                        <label>Title:
+                            <input type="text" value={this.state.title} onChange={this.update("title")}/>
+                        </label>
 
-                    <label>Date:
-                        <input type="Date" value={this.state.date} onChange={this.update("date")}/>
-                    </label>
+                        <label>Date:
+                            <input type="Date" value={this.state.date} onChange={this.update("date")}/>
+                        </label>
 
-                    <label>Start Time:
-                        <input type="time" value={this.state.start_time} onChange={this.update("start_time")} />
-                    </label>
+                        <label>Start Time:
+                            <input type="time" value={this.state.start_time} onChange={this.update("start_time")} />
+                        </label>
 
-                    <label>End Time:
-                        <input type="time" value={this.state.end_time} onChange={this.update("end_time")}/>
-                    </label>
+                        <label>End Time:
+                            <input type="time" value={this.state.end_time} onChange={this.update("end_time")}/>
+                        </label>
 
-                    <input type="submit" value="Create Event" />
-                </form>
+                        <input type="submit" value="Create Event" />
+                    </form>
+
+                </div>
             </div>
         )
     }
