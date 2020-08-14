@@ -69,7 +69,7 @@ class User extends React.Component {
           </div>
         </div>
 
-        <TeacherDash user={teacher} events={events} defaultView={"month"} />
+        <TeacherDash user={teacher} events={events} defaultView={"week"} />
         <ScheduleForm
           teacherId={this.props.match.params.teacher_id}
           events={events}
