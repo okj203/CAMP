@@ -1,10 +1,15 @@
-
-
 .teacher-index-container {
   background-image: url('../../images/watercolor.png');
   // background: #f6f5f7;
   position: relative;
   overflow: hidden;
+}
+
+.watercolor {
+  width: 100%;
+	position: relative;
+	top: 0;
+  display: block;
 }
 
 .index-navbar {
