@@ -17,7 +17,7 @@ const TeacherDash = ({ user, events, defaultView, teacherId}) => {
     } else {
         return(
             <div>
-                <h1>{user.fname} {user.lname}'s Dashboard</h1>
+                <h1 className="user-dashname">{user.fname} {user.lname}'s Dashboard</h1>
                 <EventCalendar user={user} events={events} defaultView={defaultView} />
             </div>
         )

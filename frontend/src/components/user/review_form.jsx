@@ -61,8 +61,8 @@ class ReviewForm extends React.Component {
       return null
     } else {
       return (
-        <div className="reviews-index">
-          <h3>Would you like to leave a review for {teacherInfo.fname} {teacherInfo.lname}?</h3>
+        <div className="reviews-form">
+          <h3 className="leave-review">Would you like to leave a review for {teacherInfo.fname} {teacherInfo.lname}?</h3>
           {this.reviewForm()}
         </div>
       )

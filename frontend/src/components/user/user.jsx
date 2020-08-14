@@ -69,9 +69,13 @@ class User extends React.Component {
         </div>
         <TeacherDash teacherId={teacherId} user={teacher} events={events} defaultView={"month"} />
         <ScheduleForm teacherId={this.props.match.params.teacher_id} events={events} currentUser={currentUser} fetchNewEvent={fetchNewEvent} match={this.props.match.params.teacherId} />
-        <TeacherReviews fetchUserReviews={this.props.fetchUserReviews} reviews={reviews} teacherId={teacherId} teacher={teacher} />
-        <ReviewForm composeReview={this.props.composeReview} reviews={reviews} 
-        teacherId={teacherId} teacher={teacher} reviewerId={reviewerId} />
+        <div className="review-form-container">
+          <div className="review-container">
+            <TeacherReviews fetchUserReviews={this.props.fetchUserReviews} reviews={reviews} teacherId={teacherId} teacher={teacher} />
+            <ReviewForm composeReview={this.props.composeReview} reviews={reviews} 
+            teacherId={teacherId} teacher={teacher} reviewerId={reviewerId} />
+          </div>
+        </div>
       </div>
     );
   }

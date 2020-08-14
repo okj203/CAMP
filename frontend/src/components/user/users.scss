@@ -1,13 +1,13 @@
 .teacher-index-container {
-  background-image: url('../../images/watercolor.png');
+  background-image: url("../../images/watercolor.png");
   position: relative;
   overflow: hidden;
 }
 
 .watercolor {
   width: 60%;
-	position: absolute;
-	top: 0;
+  position: absolute;
+  top: 0;
   display: block;
   z-index: -1;
   opacity: 0.8;
@@ -98,7 +98,32 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  list-style-type: circle;
+  font-family: "Comic Neue", cursive;
+  font-size: 15px;
+}
+
+.single-review {
+  margin-bottom: 20px;
+}
+
+.reviews-form {
+  font-family: "Comic Neue", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.leave-review {
+  margin-bottom: 25px;
+}
+
+.teacher-review-form {
+  font-family: "Comic Neue", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .show-info-header {
@@ -109,12 +134,6 @@
 
 .each-review-info {
   display: flex;
-}
-
-.teacher-review-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .teacher-list {
