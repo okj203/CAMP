@@ -1,0 +1,28 @@
+.calendar-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.student-nav {
+  position: relative;
+  left: 70px;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.lessons-list {
+  position: relative;
+  left: 20px;
+  list-style-type: circle;
+  margin-top: 8px;
+}
+
+.pending-lessons {
+  margin-top: 7px;
+}
+
+.calendar-container {
+  margin-top: 35px;
+}
