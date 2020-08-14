@@ -29,6 +29,8 @@ export const clearErrors = () => ({
   type: CLEAR_SESSION_ERRORS
 });
 
+
+
 export const signup = (user) => (dispatch) => {
   return SessionUtil.signup(user).then(
     () => dispatch(login(user)),

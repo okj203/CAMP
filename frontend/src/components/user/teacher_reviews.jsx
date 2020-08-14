@@ -5,35 +5,6 @@ import './users.scss'
 
 class User extends React.Component {
 
-<<<<<<< HEAD
-  // showHeader() {
-  //   const { teacher } = this.props;
-  //   return (
-  //     <div className="show-info-header">
-  //       <h1>{teacher.fname} {teacher.lname}</h1>
-  //       <p>{teacher.email}</p>
-  //     </div>
-  //   )
-  // }
-
-  mapReviews() {
-    // const { reviews, teacher, teacherId } = this.props;
-    // if (teacher) {
-    // return (
-    //   reviews.map((review, idx) => (
-    //     console.log(teacher[review.reviewer_id]),
-    //     console.log(review.reviewer_id),
-    //     <li key={idx}>
-    //       <p>{review.rating} Stars</p>
-    //       <p>{review.description}</p>
-    //       <p>{teacher[review.reviewer_id]}</p>
-    //     </li>
-    //   ))
-    // );
-  }
-
-=======
->>>>>>> e8895acd912ba80885c9232629163aae187f253c
   showReviews() {
     const { reviews, teacher, teacherId } = this.props;
     // const { fname, lname } = teacher ? teacher : null

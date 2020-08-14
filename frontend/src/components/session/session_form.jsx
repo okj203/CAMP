@@ -18,6 +18,11 @@ export default class SessionForm extends React.Component {
     this.handleDemo = this.handleDemo.bind(this);
   }
 
+  componentDidMount() {
+    debugger;
+    this.props.clearErrors();
+  }
+
   handleDemo(e) {
     e.preventDefault();
     const demoUser = {
