@@ -49,7 +49,7 @@ class User extends React.Component {
     return (
       <div>
         <div className="teachers-index-container">
-          <img alt="watercolor" className="watercolor" src={watercolor} />
+          {/* <img alt="watercolor" className="watercolor" src={watercolor} /> */}
           <div className="index-header">
             <div className="index-navbar">
               <Link className="dash-btn" to="/dashboard">
