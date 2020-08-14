@@ -39,14 +39,10 @@ class User extends React.Component {
     const teacherInfo = teacher[teacherId]
     if (typeof reviewsLength == "undefined" || Object.values(teacher).length < 2) {
       return (
-        <div>
-          <div className="no-reviews">
-            <h2>There are no reviews</h2>
-          </div>
-          {/* <h1>{teacherInfo.fname} {teacherInfo.lname}'s reviews!</h1> */}
-        </div>
+        null
       );
-    } else if (reviews) {
+    } else 
+      if (reviewsLength || Object.values(teacher).length < 2) {
       // console.log(reviews.map(review => (
       //   teacher[review.reviewer_id].accountType
       // )))
@@ -67,6 +63,15 @@ class User extends React.Component {
             ))}
             {this.mapReviews()}
           </div>
+        </div>
+      ); 
+    } else {
+      return (
+        <div>
+          <div className="no-reviews">
+            <h2>There are no reviews</h2>
+          </div>
+          {/* <h1>{teacherInfo.fname} {teacherInfo.lname}'s reviews!</h1> */}
         </div>
       );
     }
