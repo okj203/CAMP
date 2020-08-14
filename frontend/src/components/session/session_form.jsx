@@ -27,7 +27,7 @@ export default class SessionForm extends React.Component {
     e.preventDefault();
     const demoUser = {
       email: 'demouser@gmail.com',
-      password: 'demouser'
+      password: '123456'
     }
     return this.props.login(demoUser)
   };
