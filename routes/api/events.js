@@ -9,7 +9,7 @@ const validateEventInput = require("../../validation/events");
 //teacher events index
 router.get("/:user_id", (req, res) => {
     Event.find({
-            student_id: req.params.user_id
+        student_id: req.params.user_id
     })
     .then((events) => res.json(events))
     .catch((err) => res
