@@ -16,7 +16,7 @@ export class UserIndex extends Component {
     this.props.fetchAllUsers();
   }
 
-  showUser(user, idx) {
+  showUser(user) {
     if (user.accountType === "teacher")
       return (
         <ul className="teacher-list">
@@ -55,10 +55,8 @@ export class UserIndex extends Component {
             </h2>
           </div>
           <div className="teacher-index-inner">
-            {allUsers.map((user, idx) => (
-              <div className="teacers-index-list">
-                {this.showUser(user, idx)}
-              </div>
+            {allUsers.map((user) => (
+                this.showUser(user)
             ))}
           </div>
         </div>
