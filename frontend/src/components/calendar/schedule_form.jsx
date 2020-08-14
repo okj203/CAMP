@@ -34,7 +34,7 @@ class ScheduleForm extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className="event-form">
                 <form onSubmit={this.handleSubmit}>
                     <label>Title:
                         <input type="text" value={this.state.title} onChange={this.update("title")}/>
