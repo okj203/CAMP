@@ -6,9 +6,7 @@ class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    const { teacherId } = this.props;
-    const { reviewerId } = this.props;
-    const { teacher } = this.props;
+    const { teacherId, reviewerId } = this.props;
     this.state = {
       rating: "",
       description: "",

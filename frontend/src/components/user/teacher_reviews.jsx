@@ -1,5 +1,5 @@
 import React from "react";
-import UserInfo from './user_info';
+// import UserInfo from './user_info';
 import './users.scss'
 // import { UserIndex } from './user_index_container';
 

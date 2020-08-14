@@ -7,9 +7,6 @@ import TeacherDash from "../dashboard/teacher_dashboard"
 import ScheduleForm from "../calendar/schedule_form"
 
 class User extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     const { teacherId } = this.props;
