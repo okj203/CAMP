@@ -40,7 +40,7 @@ class User extends React.Component {
     const teacherInfo = teacher[teacherId]
     return (
       <div>
-        <TeacherDash user={teacher} events={events} defaultView={"month"} />
+        <TeacherDash teacherId={teacherId} user={teacher} events={events} defaultView={"month"} />
         <ScheduleForm teacherId={this.props.match.params.teacher_id} events={events} currentUser={currentUser} fetchNewEvent={fetchNewEvent} match={this.props.match.params.teacherId} />
         <TeacherReviews reviews={reviews} teacherId={teacherId} teacher={teacher} />
         <ReviewForm composeReview={this.props.composeReview} reviews={reviews} 

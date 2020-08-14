@@ -9,7 +9,7 @@ class User extends React.Component {
     const { reviews, teacher, teacherId } = this.props;
     // const { fname, lname } = teacher ? teacher : null
     const reviewsLength = reviews.length
-    console.log(Object.values(teacher).length)
+    // console.log(Object.values(teacher).length)
     const teacherInfo = teacher[teacherId]
     if (typeof reviewsLength == "undefined" || Object.values(teacher).length < 2) {
       return (
@@ -17,7 +17,6 @@ class User extends React.Component {
       );
     } else 
       if (reviewsLength || Object.values(teacher).length < 2) {
-      const id = reviews[0].reviewer_id
       return (
         <div className="reviews-index">
           <h1>{teacherInfo.fname} {teacherInfo.lname}'s reviews!</h1>
