@@ -8,9 +8,6 @@ import "./users.scss";
 // import image from "../../images/jess-bailey-l3N9Q27zULw-unsplash.jpg"
 
 export class UserIndex extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     this.props.fetchAllUsers();

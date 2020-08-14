@@ -16,7 +16,7 @@ class EventCalendar extends React.Component {
 
 
   onEventResize = ({events}) => {
-    const { start_time, end_time } = events;
+    // const { start_time, end_time } = events;
   };
 
   onEventDrop = (data) => {
