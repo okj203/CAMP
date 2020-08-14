@@ -20,6 +20,19 @@ router.get("/:user_id", (req, res) => {
     );
 });
 
+router.get("/teacher/:user_id", (req, res) => {
+    Event.find({
+            teacher_id: req.params.user_id
+    })
+    .then((events) => res.json(events))
+    .catch((err) => res
+        .status(404)
+        .json({
+            noeventsfound: "No events found for the user"
+        })
+    );
+});
+
 //teacher event form
 router.post(
     "/:user_id",
