@@ -22,5 +22,4 @@ export const fetchUserReviews = (teacher_id) => (dispatch) =>
 export const composeReview = (data) => (dispatch) =>
   writeReview(data)
     .then((review) => dispatch(receiveNewReview(review)))
-    // .then(Document.load())
     .catch((err) => console.log(err));
