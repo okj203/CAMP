@@ -73,7 +73,7 @@ router.post("/register", (req, res) => {
       return res.status(400).json(errors);
     } else {
       const newUser = new User({
-        email: req.body.email,
+        email: req.body.email.toLowerCase(),
         password: req.body.password,
         fname: req.body.fname,
         lname: req.body.lname,
@@ -115,7 +115,7 @@ router.post("/login", (req, res) => {
     return res.status(400).json(errors);
   }
 
-  const email = req.body.email;
+  const email = req.body.email.toLowerCase();
   const password = req.body.password;
 
   User.findOne({ email }).then((user) => {

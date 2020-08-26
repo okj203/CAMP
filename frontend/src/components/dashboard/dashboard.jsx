@@ -10,15 +10,29 @@ class Dashboard extends React.Component {
     this.props.fetchUserEvents(this.props.user.id);
   }
 
+  currentLink() {
+    if (this.props.user.accountType === "student") {
+      return (
+        <Link className="dash-btn" to="/teachers">
+          Teachers
+        </Link>
+      )
+    } else {
+      return (
+        <Link className="dash-btn" to="/students">
+          Students
+        </Link>
+      )
+    }
+  }
+
   render() {
     const navBtns = (
       <div className="teachers-index-container">
         <img alt="watercolor" className="watercolor" src={watercolor} />
         <div className="index-header">
           <div className="index-navbar">
-            <Link className="dash-btn" to="/teachers">
-              Teachers
-            </Link>
+            {this.currentLink()}
             <button className="logout-btn" onClick={this.props.logout}>
               Log out
             </button>
