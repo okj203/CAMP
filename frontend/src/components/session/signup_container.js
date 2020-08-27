@@ -12,7 +12,6 @@ const mdtp = dispatch => ({
   processForm: user => dispatch(signup(user)),
   login: user => dispatch(login(user)),
   clearErrors: () => dispatch(clearErrors())
-
 });
 
 export default connect(mstp, mdtp)(SessionForm);

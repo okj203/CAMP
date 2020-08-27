@@ -1,4 +1,5 @@
 import { getUserReviews, writeReview } from "../util/review_api_util";
+import { receiveErrors } from "./session_actions"
 
 export const RECEIVE_USER_REVIEWS = "RECEIVE_USER_REVIEWS";
 export const RECEIVE_NEW_REVIEW = "RECEIVE_NEW_REVIEW";
@@ -22,4 +23,7 @@ export const fetchUserReviews = (teacher_id) => (dispatch) =>
 export const composeReview = (data) => (dispatch) =>
   writeReview(data)
     .then((review) => dispatch(receiveNewReview(review)))
-    .catch((err) => console.log(err));
+    .catch(error => {
+      dispatch(receiveErrors(error.response.data));
+    })
+   

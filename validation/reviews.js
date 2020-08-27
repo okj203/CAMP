@@ -7,12 +7,16 @@ module.exports = function validateReviewInput(data) {
 
   data.description = validText(data.description) ? data.description : "";
 
-  if (!Validator.isLength(data.description, { min: 1, max: 500 })) {
-    errors.description = "Review must be between 1 and 500 characters";
+  if (!Validator.isLength(data.description, { min: 1, max: 100 })) {
+    errors.description = "Review must be between 1 and 100 characters";
+  }
+
+  if (!Validator.isLength(data.rating, { min: 1, max: 1 })) {
+    errors.description = "Rating is required";
   }
 
   if (Validator.isEmpty(data.description)) {
-    errors.description = "Description field is required";
+    errors.description = "Description is required";
   }
 
   return {

@@ -17,6 +17,7 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    
     this.props.composeReview(this.state);
   }
 
@@ -46,6 +47,7 @@ class ReviewForm extends React.Component {
             ></textarea>
           </label>
           <label>
+            {/* <p className="session-errors">{lname}</p> */}
             <input type="submit" />
           </label>
         </form>
@@ -54,7 +56,8 @@ class ReviewForm extends React.Component {
   };
 
   render() {
-    const { reviews, teacher, teacherId } = this.props;
+    const { reviews, teacher, teacherId, errors } = this.props;
+    console.log(errors.description)
     const reviewsLength = reviews.length
     const teacherInfo = teacher[teacherId]
     // console.log(reviews)
@@ -65,6 +68,7 @@ class ReviewForm extends React.Component {
         <div className="reviews-form">
           <h3 className="leave-review">Would you like to leave a review for {teacherInfo.fname} {teacherInfo.lname}?</h3>
           {this.reviewForm()}
+          <p className="session-errors">{errors.description}</p>
         </div>
       )
     };

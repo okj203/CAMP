@@ -14,6 +14,7 @@ class User extends React.Component {
     this.props.fetchUserInfo(teacherId);
     this.props.fetchUserReviews(teacherId);
     this.props.fetchUserEvents(teacherId);
+    this.props.clearErrors();
   }
 
   showHeader() {
@@ -36,6 +37,7 @@ class User extends React.Component {
       events,
       currentUser,
       fetchNewEvent,
+      errors
     } = this.props;
     const reviewsLength = reviews.length;
     const teacherInfo = teacher[teacherId];
@@ -67,7 +69,7 @@ class User extends React.Component {
           <div className="review-container">
             <TeacherReviews fetchUserReviews={this.props.fetchUserReviews} reviews={reviews} teacherId={teacherId} teacher={teacher} />
             <ReviewForm composeReview={this.props.composeReview} reviews={reviews} 
-            teacherId={teacherId} teacher={teacher} reviewerId={reviewerId} />
+              teacherId={teacherId} teacher={teacher} reviewerId={reviewerId} errors={errors}/>
           </div>
         </div>
       </div>

@@ -8,8 +8,13 @@ class ReviewForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
+    this.props.clearErrors();
     this.props.composeReview(this.state);
   }
 
@@ -18,6 +23,8 @@ class ReviewForm extends React.Component {
   }
 
   render() {
+    const errors  = this.props.errors.description
+    console.log(this.props.errors.description)
     return (
       <div>
         <h3>Tell us about your teacher!</h3>
@@ -42,6 +49,7 @@ class ReviewForm extends React.Component {
             {/* Submit */}
           {/* </button> */}
         </form>
+        <p className="session-errors">{errors}</p>
       </div>
     );
   }
