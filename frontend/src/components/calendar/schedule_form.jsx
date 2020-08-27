@@ -9,9 +9,9 @@ class ScheduleForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.state = {
             title: "",
-            date: Date.now(),
-            start_time: Date.now(),
-            end_time: Date.now(),
+            date: "",
+            start_time: "",
+            end_time: "",
             student_id: this.props.currentUser.id,
             teacher_id: this.props.teacherId
         }

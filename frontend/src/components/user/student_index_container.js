@@ -46,7 +46,7 @@ export class UserIndex extends Component {
               </button>
             </div>
 
-            <h1 className="index-title"> CAMP Teachers </h1>
+            <h1 className="index-title"> CAMP Students </h1>
             <h2 className="mission">
               Our mission is to foster our students to learn English as a tool,
               not as a goal, and to become individuals with creative and
