@@ -46,11 +46,11 @@ class ScheduleForm extends React.Component {
                         </label>
 
                         <label>Start Time:
-                            <input type="time" value={this.state.start_time} onChange={this.update("start_time")} />
+                            <input type="time" min="9:00" max="18:00" value={this.state.start_time} onChange={this.update("start_time")} />
                         </label>
 
                         <label>End Time:
-                            <input type="time" value={this.state.end_time} onChange={this.update("end_time")}/>
+                            <input type="time" min="9:00" max="18:00" value={this.state.end_time} onChange={this.update("end_time")}/>
                         </label>
 
                         <input type="submit" value="Create Event" />
