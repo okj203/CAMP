@@ -7,6 +7,12 @@ import github from "../../images/github.svg";
 import person from "../../images/person.svg";
 import linkedin from "../../images/linkedin.svg";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngellist } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+
 import profile_1 from "../../images/profile_1.png";
 import profile_2 from "../../images/profile_2.png";
 import profile_3 from "../../images/profile_3.png";
@@ -20,10 +26,10 @@ class MainPage extends React.Component {
         <Navbar className="navbar" />
         <div className="splash-container">
           <img alt="splash_img" className="splash-img" src={splash_img} />
-          <h1 className="motto">
-            CAMP creates a connection between children and the world by
-            providing a global learning experience.
-          </h1>
+            <h1 className="motto">
+              CAMP creates a connection between children and the world by
+              providing a global learning experience.
+            </h1>
         </div>
         <div className="profile-container">
           <div>
@@ -31,16 +37,16 @@ class MainPage extends React.Component {
             <p className="name">Ock Kyung / Cathy Jung</p>
             <div className="icon-container">
               <a href="https://okj203.github.io/">
-                <img className="icon" src={person} alt="person" />
+                <FontAwesomeIcon className="icon" icon={faUserCircle} />
               </a>
               <a href="https://www.linkedin.com/in/ock-kyung-cathy-jung-18a66296/">
-                <img className="icon" src={linkedin} alt="person" />
+                <FontAwesomeIcon className="icon" icon={faLinkedin} />
               </a>
               <a href="https://github.com/okj203">
-                <img className="icon" src={github} alt="github" />
+                <FontAwesomeIcon className="icon" icon={faGithub} />
               </a>
               <a href="https://angel.co/u/ock-kyung-jung">
-                <img className="icon" src={angellist} alt="angellist" />
+                <FontAwesomeIcon className="icon" icon={faAngellist} />
               </a>
             </div>
           </div>
@@ -49,16 +55,16 @@ class MainPage extends React.Component {
             <p className="name">Anthony Cruz</p>
             <div className="icon-container">
               <a href="https://anthonyecruz.com/">
-                <img className="icon" src={person} alt="person" />
+                <FontAwesomeIcon className="icon" icon={faUserCircle} />
               </a>
               <a href="https://www.linkedin.com/in/anthonyecruz/">
-                <img className="icon" src={linkedin} alt="person" />
+                <FontAwesomeIcon className="icon" icon={faLinkedin} />
               </a>
               <a href="https://github.com/Anthony-E-Cruz">
-                <img className="icon" src={github} alt="github" />
+                <FontAwesomeIcon className="icon" icon={faGithub} />
               </a>
               <a href="https://angel.co/u/anthony-cruz-13">
-                <img className="icon" src={angellist} alt="angellist" />
+                <FontAwesomeIcon className="icon" icon={faAngellist} />
               </a>
             </div>
           </div>
@@ -67,16 +73,16 @@ class MainPage extends React.Component {
             <p className="name">Mackenzie Young</p>
             <div className="icon-container">
               <a href="https://mac9330.github.io/">
-                <img className="icon" src={person} alt="person" />
+                <FontAwesomeIcon className="icon" icon={faUserCircle} />
               </a>
               <a href="https://www.linkedin.com/post-inspector/">
-                <img className="icon" src={linkedin} alt="person" />
+                <FontAwesomeIcon className="icon" icon={faLinkedin} />
               </a>
               <a href="https://github.com/mac9330/">
-                <img className="icon" src={github} alt="github" />
+                <FontAwesomeIcon className="icon" icon={faGithub} />
               </a>
               <a href="https://angel.co/u/mac-young-1">
-                <img className="icon" src={angellist} alt="angellist" />
+                <FontAwesomeIcon className="icon" icon={faAngellist} />
               </a>
             </div>
           </div>
@@ -85,16 +91,16 @@ class MainPage extends React.Component {
             <p className="name">Paul Gonzalez</p>
             <div className="icon-container">
               <a href="https://paulg21.github.io/">
-                <img className="icon" src={person} alt="person" />
+                <FontAwesomeIcon className="icon" icon={faUserCircle} />
               </a>
               <a href=" https://www.linkedin.com/in/paul-gonzalez-a17631192/">
-                <img className="icon" src={linkedin} alt="person" />
+                <FontAwesomeIcon className="icon" icon={faLinkedin} />
               </a>
               <a href="https://github.com/PaulG21">
-                <img className="icon" src={github} alt="github" />
+                <FontAwesomeIcon className="icon" icon={faGithub} />
               </a>
               <a href="https://angel.co/u/paul-gonzalez-8">
-                <img className="icon" src={angellist} alt="angellist" />
+                <FontAwesomeIcon className="icon" icon={faAngellist} />
               </a>
             </div>
           </div>
