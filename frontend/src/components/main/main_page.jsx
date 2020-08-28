@@ -62,24 +62,24 @@ class MainPage extends React.Component {
         <div className="children-container">
           <img className="children" src={children} alt="children" />
 
-          <div class="card-container">
-            <div class="card">
-              <div class="card-front">Who we are</div>
-              <div class="card-back">We are 4 software engineers, who utilize EdTech to improve remote learning experience during the COVID-19 pandemic.</div>
+          <div className="card-container">
+            <div className="card">
+              <div className="card-front">Who we are</div>
+              <div className="card-back">We are 4 software engineers, who utilize EdTech to improve remote learning experience during the COVID-19 pandemic.</div>
             </div>
           </div>
 
-          <div class="card-container">
-            <div class="card">
-              <div class="card-front">What we believe</div>
-              <div class="card-back">We believe in multi-senses education theory to provide students a learning environment with maximized langauge exposure.</div>
+          <div className="card-container">
+            <div className="card">
+              <div className="card-front">What we believe</div>
+              <div className="card-back">We believe in multi-senses education theory to provide students a learning environment with maximized langauge exposure.</div>
             </div>
           </div>
 
-          <div class="card-container">
-            <div class="card">
-              <div class="card-front">What we do</div>
-              <div class="card-back">We provide authentic language learning experience. Students will be introduced to our teachers across the world.</div>
+          <div className="card-container">
+            <div className="card">
+              <div className="card-front">What we do</div>
+              <div className="card-back">We provide authentic language learning experience. Students will be introduced to our teachers across the world.</div>
             </div>
           </div>
         </div>
