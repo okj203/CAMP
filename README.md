@@ -4,7 +4,7 @@ A language learning platform that provides educational lessons and one on one vi
 [Live Site](https://camp-mern-project.herokuapp.com/) 
 
 ## Background and Overview
-CAMP is a language learning platform, which utilizes EdTech to support access to remote learning during the COVID-19 pandemic.
+CAMP is a language learning platform, which utilizes EdTech to support remote learning during the COVID-19 pandemic.
 CAMP takes a two-step approach to language learning: 
 * The first step entails ineractive learning materials, such as videos flash cards and worksheets, which were curated based on multi-senses education theory to provide students a learning environment with maximized langauge exposure.
 * The second step is one-on-one video calls, which build on and further cement the material covered in each lesson. Video calls are scheduled upon completion of each lesson. Teachers will build on the concepts introduced
