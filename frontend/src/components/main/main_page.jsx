@@ -64,21 +64,21 @@ class MainPage extends React.Component {
 
           <div className="card-container">
             <div className="card">
-              <div className="card-front">Who we are</div>
+              <div className="card-front">Who We Are</div>
               <div className="card-back">We are 4 software engineers, who utilize EdTech to improve remote learning experience during the COVID-19 pandemic.</div>
             </div>
           </div>
 
           <div className="card-container">
             <div className="card">
-              <div className="card-front">What we believe</div>
+              <div className="card-front">What We Believe</div>
               <div className="card-back">We believe in multi-senses education theory to provide students a learning environment with maximized langauge exposure.</div>
             </div>
           </div>
 
           <div className="card-container">
             <div className="card">
-              <div className="card-front">What we do</div>
+              <div className="card-front">What We Do</div>
               <div className="card-back">We provide authentic language learning experience. Students will be introduced to our teachers across the world.</div>
             </div>
           </div>
