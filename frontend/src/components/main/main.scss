@@ -85,17 +85,76 @@ footer {
   font-size: 38px;
 }
 
+.add-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background: #f6f5f7;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  height: 300px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: -38px;
+  z-index: 1;
+  margin-bottom: 70px;
+}
+
+.add {
+  width: 100px;
+  height: 100px;
+}
+
+.add-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.add-inner h3 {
+  margin-top: 25px;
+}
+
+.add-inner p {
+  margin-top: 15px;
+}
+
+.children {
+  width: 100%;
+  height: 400px;
+  filter: brightness(0.35);
+  position: absolute;
+}
+
+.team-intro {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 50px;
+  color: orange;
+  text-align: center;
+  margin-top: 125px;
+}
+
 .profile-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 50px;
+  margin: 60px;
+}
+
+.profile-person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile {
-  width: 186px;
-  height: 186px;
-  border-radius: 93px;
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
 }
 
 .name {
@@ -114,4 +173,61 @@ footer {
   color: orange;
   font-size: x-large;
   margin: 5px;
+}
+// children
+.children-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+// card
+.card-container {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card-front {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background: #ff4b2b;
+  color: white;
+  padding: 20px;
+  opacity: 75%;
 }

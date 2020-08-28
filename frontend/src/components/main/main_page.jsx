@@ -2,10 +2,6 @@ import React from "react";
 import Navbar from "../nav/navbar_form";
 import splash_img from "../../images/splash_image4.jpg";
 import "./main.scss";
-import angellist from "../../images/angellist.svg";
-import github from "../../images/github.svg";
-import person from "../../images/person.svg";
-import linkedin from "../../images/linkedin.svg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngellist } from "@fortawesome/free-brands-svg-icons";
@@ -18,6 +14,10 @@ import profile_2 from "../../images/profile_2.png";
 import profile_3 from "../../images/profile_3.png";
 import profile_4 from "../../images/profile_4.png";
 
+import book from "../../images/book.png";
+import calendar from "../../images/calendar.png";
+import certificate from "../../images/certificate.png";
+import children from "../../images/children.png";
 
 class MainPage extends React.Component {
   render() {
@@ -26,13 +26,68 @@ class MainPage extends React.Component {
         <Navbar className="navbar" />
         <div className="splash-container">
           <img alt="splash_img" className="splash-img" src={splash_img} />
-            <h1 className="motto">
-              CAMP creates a connection between children and the world by
-              providing a global learning experience.
-            </h1>
+          <h1 className="motto">
+            CAMP creates a connection between children and the world by
+            providing a global learning experience.
+          </h1>
         </div>
+
+        <div className="add-container">
+          <div className="add-inner">
+            <img src={book} className="add" alt="book" />
+            <h3>Global Learning</h3>
+            <p>Broaden your horizon!</p>
+          </div>
+
+          <div className="add-inner">
+            <img src={calendar} className="add" alt="calendar" />
+            <h3>Flexible Schedule</h3>
+            <p>
+              Be your own boss <br />
+              and set your <br />
+              own schedule!
+            </p>
+          </div>
+
+          <div className="add-inner">
+            <img src={certificate} className="add" alt="certificate" />
+            <h3>Easy Preparation</h3>
+            <p>
+              We provide your <br />
+              lesson materials!
+            </p>
+          </div>
+        </div>
+
+        <div className="children-container">
+          <img className="children" src={children} alt="children" />
+
+          <div class="card-container">
+            <div class="card">
+              <div class="card-front">Who we are</div>
+              <div class="card-back">We are 4 software engineers, who utilize EdTech to improve remote learning experience during the COVID-19 pandemic.</div>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card">
+              <div class="card-front">What we believe</div>
+              <div class="card-back">We believe in multi-senses education theory to provide students a learning environment with maximized langauge exposure.</div>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card">
+              <div class="card-front">What we do</div>
+              <div class="card-back">We provide authentic language learning experience. Students will be introduced to our teachers across the world.</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="team-intro">TEAM CAMP</div>
+
         <div className="profile-container">
-          <div>
+          <div className="profile-person">
             <img src={profile_1} className="profile" alt="cathy" />
             <p className="name">Ock Kyung / Cathy Jung</p>
             <div className="icon-container">
@@ -50,7 +105,7 @@ class MainPage extends React.Component {
               </a>
             </div>
           </div>
-          <div>
+          <div className="profile-person">
             <img src={profile_2} className="profile" alt="anthony" />
             <p className="name">Anthony Cruz</p>
             <div className="icon-container">
@@ -68,7 +123,7 @@ class MainPage extends React.Component {
               </a>
             </div>
           </div>
-          <div>
+          <div className="profile-person">
             <img src={profile_3} className="profile" alt="mac" />
             <p className="name">Mackenzie Young</p>
             <div className="icon-container">
@@ -86,7 +141,7 @@ class MainPage extends React.Component {
               </a>
             </div>
           </div>
-          <div>
+          <div className="profile-person">
             <img src={profile_4} className="profile" alt="paul" />
             <p className="name">Paul Gonzalez</p>
             <div className="icon-container">
