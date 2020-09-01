@@ -5,6 +5,11 @@ import { logout } from "../../actions/session_actions";
 import { Link } from "react-router-dom";
 import "./users.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
+import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+
+
 export class UserIndex extends Component {
 
   componentDidMount() {
@@ -33,7 +38,8 @@ export class UserIndex extends Component {
       return (
         <div className="teachers-index-container">
           <div className="index-header">
-            <div className="index-navbar">
+            <h1 className="index-title"> CAMP Teachers </h1>
+            <div className="nav-btns">
               <Link className="dash-btn" to="/dashboard">
                 Dashboard
               </Link>
@@ -41,21 +47,21 @@ export class UserIndex extends Component {
                 Log out
               </button>
             </div>
-
-            <h1 className="index-title"> CAMP Teachers </h1>
-            <h2 className="mission">
-              Our mission is to foster our students to learn English as a tool,
-              not as a goal, and to become individuals with creative and
-              critical thinking skills.
-            </h2>
           </div>
+          <h2 className="mission">
+            <FontAwesomeIcon className="quote-icon" icon={faQuoteLeft} />
+            Our mission is to foster our students to learn English as a tool,
+            not as a goal, and to become individuals with creative and critical
+            thinking skills.
+            <FontAwesomeIcon className="quote-icon" icon={faQuoteRight} />
+          </h2>
           <div className="teacher-index-inner">
             {allUsers.map((user, idx) => this.showUser(user, idx))}
           </div>
         </div>
       );
     } else {
-      return <h1>ELSE</h1>;
+      return <> </>;
     }
   }
 }

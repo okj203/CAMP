@@ -18,7 +18,7 @@ const StudentDash = ({user, events, defaultView}) => {
                 </ul>
             </div>
             <div className="calendar-container">
-                <h2 className="student-scheduled">{user.fname} {user.lname}'s Scheduled Classes</h2>
+                <h1 className="student-scheduled">{user.fname} {user.lname}'s Scheduled Classes</h1>
                 <EventCalendar events={events} defaultView={defaultView}  />
             </div>
         </div>

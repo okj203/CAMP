@@ -27,7 +27,7 @@ class MainPage extends React.Component {
         <div className="splash-container">
           <img alt="splash_img" className="splash-img" src={splash_img} />
           <h1 className="motto">
-            CAMP creates a connection between children and the world by
+            <strong>CAMP</strong> <br/> creates a connection between children and the world by
             providing a global learning experience.
           </h1>
         </div>

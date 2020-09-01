@@ -29,14 +29,14 @@ class Dashboard extends React.Component {
     const navBtns = (
       <div className="teachers-index-container">
         <div className="index-header">
-          <div className="index-navbar">
+          <h1 className="index-title"> Camper's Page </h1>
+          <div className="nav-btns">
             {this.currentLink()}
             <button className="logout-btn" onClick={this.props.logout}>
               Log out
             </button>
           </div>
 
-          <h1 className="index-title"> Camper's Page </h1>
         </div>
       </div>
     );

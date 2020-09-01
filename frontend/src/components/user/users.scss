@@ -1,19 +1,54 @@
 .teacher-index-container {
-  position: relative;
   overflow: hidden;
 }
 
-.index-navbar {
-  right: 100px;
-  position: absolute;
+.index-header {
+  display: flex;
+  position: relative;
+  background: orange;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 35px;
+}
+
+.nav-btns {
   display: flex;
 }
 
+.logout-btn {
+  margin-left: 10px;
+}
+
 .logout-btn,
-.dash-btn,
+.dash-btn {
+  display: flex;
+  color: white;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 17px;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 0 6px;
+}
+
+.logout-btn:hover,
+.dash-btn:hover {
+  background: white;
+  transition: 0.3s;
+  cursor: pointer;
+  color: orange;
+  height: 100%;
+  font-family: "Montserrat Alternates", sans-serif;
+  padding: 0 6px;
+}
 #teacher-link {
   display: flex;
+  border: 2px solid #ff4b2b;
   color: #ff4b2b;
+  border-radius: 22px;
   width: 127px;
   justify-content: center;
   text-decoration: none;
@@ -23,39 +58,35 @@
   height: 39px;
   align-items: center;
   background-color: transparent;
-  border-radius: 22px;
-  border: 2px solid #ff4b2b;
 }
 
-.logout-btn:hover,
-.dash-btn:hover,
 #teacher-link:hover {
   background-color: #ff4b2b;
   transition: 0.3s;
   cursor: pointer;
   color: white;
+  height: 100%;
   font-family: "Montserrat Alternates", sans-serif;
-}
-
-.index-header {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  left: 0;
-  margin-left: 60px;
-  margin-top: 40px;
 }
 
 .index-title {
   font-size: 50px;
   font-family: "Montserrat Alternates";
-  color: #ff4b2b;
+  color: white;
 }
 
 .mission {
   color: black;
-  font-family: "Comic Neue", cursive;
-  font-size: 15px;
+  width: 50%;
+  margin: 30px auto;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+}
+
+.quote-icon {
+  opacity: 0.1;
+  font-size: 30px;
 }
 
 .teacher-index-inner {
