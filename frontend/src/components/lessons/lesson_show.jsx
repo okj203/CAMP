@@ -2,7 +2,6 @@ import React from "react";
 import ReactPlayer from "react-player";
 import "./lessons.scss";
 import { Link } from "react-router-dom";
-import watercolor from "../../images/watercolor.png";
 import "../user/users.scss";
 
 class Lesson extends React.Component {
@@ -137,7 +136,6 @@ class Lesson extends React.Component {
   render() {
         const navBtns = (
           <div className="teachers-index-container">
-            <img alt="watercolor" className="watercolor" src={watercolor} />
             <div className="index-header">
               <div className="index-navbar">
                 <Link className="dash-btn" to="/dashboard">

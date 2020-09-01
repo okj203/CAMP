@@ -3,10 +3,7 @@ import { connect } from "react-redux";
 import { fetchAllUsers } from "../../actions/user_actions";
 import { logout } from "../../actions/session_actions";
 import { Link } from "react-router-dom";
-import watercolor from "../../images/watercolor.png";
 import "./users.scss";
-// import teacherBanner from '../../images/teacher-banner.jpg';
-// import image from "../../images/jess-bailey-l3N9Q27zULw-unsplash.jpg"
 
 export class UserIndex extends Component {
 
@@ -35,7 +32,6 @@ export class UserIndex extends Component {
     if (allUsers.length) {
       return (
         <div className="teachers-index-container">
-          <img alt="watercolor" className="watercolor" src={watercolor} />
           <div className="index-header">
             <div className="index-navbar">
               <Link className="dash-btn" to="/dashboard">

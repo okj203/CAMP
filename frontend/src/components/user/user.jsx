@@ -4,7 +4,6 @@ import ReviewForm from "./review_form";
 import TeacherDash from "../dashboard/teacher_dashboard";
 import ScheduleForm from "../calendar/schedule_form";
 import { Link } from "react-router-dom";
-import watercolor from "../../images/watercolor.png";
 import "./users.scss";
 
 class User extends React.Component {
@@ -44,7 +43,6 @@ class User extends React.Component {
     return (
       <div>
         <div className="teachers-index-container">
-          <img alt="watercolor" className="watercolor" src={watercolor} />
           <div className="index-header">
             <div className="index-navbar">
               <Link className="dash-btn" to="/dashboard">

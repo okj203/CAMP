@@ -1,10 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchUserInfo } from "../../actions/user_actions";
-// import { logout } from "../../actions/session_actions";
-// import { Link } from "react-router-dom";
-// import watercolor from "../../images/watercolor.png";
-// import "./users.scss";
 
 export class UserInfo extends React.Component {
   constructor(props) {
@@ -17,8 +13,6 @@ export class UserInfo extends React.Component {
   }
 
   render() {
-    // console.log("user info", props)
-    // const id = props ? props.id : null;
     return (
       <div>
         <h2>User Info</h2>
@@ -27,25 +21,8 @@ export class UserInfo extends React.Component {
   }
 }
 
-{
-  /* <div className="teachers-index-container">
-  <img alt="watercolor" className='watercolor' src={watercolor} />
-  <div className="index-header">
-    <div className="index-navbar">
-      <Link className="dash-btn" to="/dashboard">
-        Dashboard
-              </Link>
-      <button className="logout-btn" onClick={this.props.logout}>
-        Log out
-      </button>
-    </div>
-  </div>
-</div> */
-}
-
-const mapStateToProps = (state, ownProps) => ({
-  info: state.entities.users.info,
-  // teacher_id: ownProps.match.params.teacher_id
+const mapStateToProps = (state) => ({
+  info: state.entities.users.info
 });
 
 const mapDispatchToProps = (dispatch) => {

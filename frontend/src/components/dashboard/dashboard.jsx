@@ -2,7 +2,6 @@ import React from "react";
 import StudentDash from "./student_dashboard";
 import TeacherDash from "./teacher_dashboard";
 import { Link } from "react-router-dom";
-import watercolor from "../../images/watercolor.png";
 import '../user/users.scss';
 
 class Dashboard extends React.Component {
@@ -29,7 +28,6 @@ class Dashboard extends React.Component {
   render() {
     const navBtns = (
       <div className="teachers-index-container">
-        <img alt="watercolor" className="watercolor" src={watercolor} />
         <div className="index-header">
           <div className="index-navbar">
             {this.currentLink()}
@@ -39,11 +37,6 @@ class Dashboard extends React.Component {
           </div>
 
           <h1 className="index-title"> Camper's Page </h1>
-          {/* <h2 className="mission">
-            Our mission is to foster our students to learn the English language
-            as a tool, not as a goal, and to become individuals with creative
-            and critical thinking skills.
-          </h2> */}
         </div>
       </div>
     );
