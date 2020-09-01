@@ -2,8 +2,6 @@ import React from "react";
 import Navbar from "../nav/navbar_form";
 import splash_img from "../../images/splash_image4.jpg";
 import "./main.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngellist } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngellist } from "@fortawesome/free-brands-svg-icons";
@@ -19,7 +17,7 @@ import profile_4 from "../../images/profile_4.png";
 import book from "../../images/book.png";
 import calendar from "../../images/calendar.png";
 import certificate from "../../images/certificate.png";
-import children from "../../images/children.png";
+import children from "../../images/children.jpg";
 
 class MainPage extends React.Component {
   render() {
@@ -60,10 +58,9 @@ class MainPage extends React.Component {
             </p>
           </div>
         </div>
-
+        
         <div className="children-container">
-          <img className="children" src={children} alt="children" />
-
+        <img className="children" src={children} alt="children" />
           <div className="card-container">
             <div className="card">
               <div className="card-front">Who We Are</div>
@@ -162,7 +159,6 @@ class MainPage extends React.Component {
             </div>
           </div>
         </div>
-        <FontAwesomeIcon icon={faAngellist} />
         <footer>Copyright &copy; 2020 CAMP</footer>
       </div>
     );
