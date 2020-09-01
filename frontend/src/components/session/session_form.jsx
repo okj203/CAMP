@@ -55,7 +55,7 @@ export default class SessionForm extends React.Component {
           <select className="select-label" onChange={this.update("accountType")} value={this.state.accountType}>
             <option value="student">Student</option>
             <option value="teacher">Teacher</option>
-            <option value="parent">Parent</option>
+            {/* <option value="parent">Parent</option> */}
           </select>
         </label>
       </>
